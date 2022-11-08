@@ -9,3 +9,10 @@ This is the link of our website which is [freshly.com](https://www.freshly.com/)
 - fw21_0871 - Nisha Sharma
 - fw21_0567 - Shreyas Uday Deshpande
 - fw21_0790 - Mohd Arshad
+
+##
+## TAST TO DO.
+- ABHISHEK OJHA - HOME PAGE
+- MOHD ARSHAD - CART
+- NISHA SHARMA - PLANS & MENU
+- SHREYAS UDAY DESHPANDE - CHECKOUT AND PAYMENT
