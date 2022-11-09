@@ -16,3 +16,12 @@ This is the link of our website which is [freshly.com](https://www.freshly.com/)
 - MOHD ARSHAD - CART
 - NISHA SHARMA - PLANS & MENU
 - SHREYAS UDAY DESHPANDE - CHECKOUT AND PAYMENT
+##
+## Folder structure 
+### zonked-hall-6274
+- components
+- Put here those files which well be repeat.
+- write your file name directly
+- exp = (homePage.html)
+- exp = (homePage.js)
+- exp = (homepage.css)
