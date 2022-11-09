@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="./Components/loginAndSignup.css">
 </head>
+
 <body>
     <div id="authentication-Main_Container">
-        <img src="https://res.cloudinary.com/freshly/image/upload/c_crop,g_auto,dpr_auto,q_30,w_1500,h_900/v1494958610/joinnow-southchicken.jpg" alt="" id="authentication-Main_Container_IMG" >
 
+        <div id="authentication-Main_Container_FirstChild">
 
-        <div id="Auth_login-Container">
-            
+            <div id="Auth_login-Container">
+                <div id="Auth-Logodiv">
+                    <img src="https://i.ibb.co/sqp9KQk/foodium-logo.png" alt="">
+                    <span>foodium</span>
+                </div>
+                <div id="Auth-ContentDiv">
+                    <h1>Log In</h1>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Last last name">
+                    <label for="number">Phone No.</label>
+                    <input type="number" id="number" placeholder="Enter your phone number">
+                    <button id="Auth-login">Log In</button>
+
+                    <div>
+                        <a href="">Forgot Password?</a>
+                        <p>Don't have an account? <a href="#" id="Auth-getStarted_Jump">Get Started</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="Auth_signup-Container">
+                <h1>Dinner's ready!</h1>
+                <h2>Chef-prepared, healthy meals delivered weekly</h2>
+                <div id="signin-firstDiv">
+                    <input type="text" id="firstName" placeholder="First name">
+                    <input type="text" id="lastName" placeholder="Last name">
+                </div>
+
+                <div id="signin-secondDiv">
+                    <input type="text" id="email" placeholder="Email">
+                    <input type="number" id="number" placeholder="Phone number">
+                    <button id="continue">Continue</button>
+                </div>
+
+                <p>
+                    <span>Already have an account</span>?<span><a href="#" id="Auth-logIn_Jump">Log in</a></span>
+                </p>
+                <p>
+                    <span>By continuing, you agree to our </span><a href="">Terms</a> and <a href="">Privacy
+                        Policy.</a>& will receive emails from Freshly.
+                </p>
+
+            </div>
         </div>
-        <div id="Auth_signup-Container"></div>
-
-
 
     </div>
 </body>
+
 </html>
+<script src="loginAndsignup.js"></script>
