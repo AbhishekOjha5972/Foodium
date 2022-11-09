@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#authentication-Main_Container{
+width: 100%;
+height: 100vh;
+}
+#authentication-Main_Container_IMG{
+    width: 100%;
+    height: fit-content;
+}
