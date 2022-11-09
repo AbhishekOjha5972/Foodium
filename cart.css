@@ -1,0 +1,247 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#full-page {
+    width: 100%;
+    height: 600px;
+    border: 0px solid red;
+    position: relative;
+}
+
+#billing-section {
+    width: 23%;
+    height: 600px;
+    border: 1px solid blue;
+    /* background-color: blue; */
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#delievery-date {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#clear {
+    float: right;
+    font-size: 14px;
+    text-decoration: underline;
+    color: blue;
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+
+#navbar {
+    width: 77%;
+    height: 50px;
+    border: 0px solid green;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+#navbar a {
+    font-size: 20px;
+    text-decoration: underline 1px;
+    color: blue;
+}
+
+#navbar > a:nth-child(1) {
+    margin-left: 20px;
+}
+
+/* #navbar > a:nth-child(2) */
+#customer-support {
+    margin-right: 20px;
+}
+
+#below-navbar {
+    width: 76.7%;
+    height: 50px;
+    background-color: #fffdf7;
+    border: 0px solid grey;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+#below-navbar button {
+    margin-right: 20px;
+    font-weight: bold;
+    color: blue;
+    border: none;
+    height: 95%;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+#below-navbar p {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#below-navbar button:hover {
+    color: white;
+    background-color: blue;
+}
+
+#sidebar {
+    width: 17%;
+    height: 500px;
+    border: 0px solid blue;
+    background-color: brown;
+    position: absolute;
+    top: 100px;
+    transition: 0.4s;
+    left: -17%;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#grid-container {
+    width: 77%;
+    height: 480px;
+    border: 0px solid purple;
+    background-color: #fffdf7;
+    padding: 10px 5px;
+    position: absolute;
+    right: 23%;
+    top: 103px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    overflow-y: scroll;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.cardDiv {
+    border: 0px solid red;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.cardDiv > div:nth-child(1) {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cardDiv > .adding {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    background-color: rgb(42, 108, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+.adding_Button {
+    width: 85px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid grey;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    transition: 0.1s;
+    padding-right: 13px;
+    display: none;
+}
+
+.adding_Button > p:nth-child(1) {
+    margin: 0 0 8px 0;
+}
+
+/* .adding_Button > p:nth-child(2) */
+.count {
+    margin: 0 0 0 12px;
+    font-size: 20px;
+}
+
+/* .adding_Button > p:nth-child(3) */
+.adding_Button p + p {
+    margin-left: -7px;
+    font-size: 25px;
+}
+
+.cardDiv:hover img{
+    scale: 1.4;
+}
+
+.cardDiv > div > img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    transition: 1s;
+}
+
+.cardDiv h3 {
+    padding-left: 15px;
+}
+
+.cardDiv p {
+    padding-left: 15px;
+}
+
+#detail-window {
+    width: 50%;
+    height: 450px;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+
+/* Media Queries */
+
+@media all and (max-width: 1300px) and (min-width:901px) {
+    /* Medium Screen Styles  */
+    #grid-container {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+@media all and (max-width: 900px) and (min-width:200px) {
+  /* Small Screen Styles  */
+  #grid-container {
+    grid-template-columns: repeat(1,1fr);
+  }
+
+};
