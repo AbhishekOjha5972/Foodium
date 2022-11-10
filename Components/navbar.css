@@ -175,7 +175,15 @@ a {
     color: white;
     border-top: 1px solid rgb(49, 103, 255);
     transition: .3s;
-
+}
+.loggedInUserData{
+    background-color: rgb(49, 103, 255);
+   border: 1px solid rgb(48,48,48);
+    width: 90px;
+    border: none;
+    height: 35px;
+    background-color: white;
+    font-weight: 600;
 }
 
 #secondNavbarChild #rightDiv>#sign_Up:hover {
