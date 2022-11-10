@@ -80,11 +80,9 @@ if(lsUserData==null){
     // signUpPlace.style.display='block';
 }
 else{
-
     logInPlace.style.display='none';
     signUpPlace.style.display='none';
     userDataAppend.style.display="block"
     userDataAppend.textContent=lsUserData.first_name;
-
 }
 
