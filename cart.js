@@ -674,7 +674,7 @@ let same_product_data = [
         serving: "single-serve"
     },
 ];
-// localStorage.setItem("product_data", JSON.stringify(product_data))
+
 
 
 let grid_container_Div = document.getElementById("grid-container");
@@ -684,21 +684,20 @@ let grid_container_Div = document.getElementById("grid-container");
 function append(data) {
 
     grid_container_Div.innerHTML = null;
-//{name, subtitle, image, calories, serving}
 
     data.forEach(function(el,index) {
 
         let div = document.createElement('div');
         div.className = 'cardDiv';
 
-        div.onclick = function() {
-            // console.log(el,index);
-        }
-
         let img_container = document.createElement('div');
 
         let img = document.createElement('img');
         img.src = el.image;
+        img.onclick = function() {
+            detail_window.style.display = 'inline';
+            PopUpDetails(el);
+        }
 
         img_container.append(img);
 
@@ -813,10 +812,6 @@ document.getElementById('calories').addEventListener('click', function(){
 
 // Sorting normally
 sortNormally = (data) => {
-
-    // data.sort(function(a,b){
-    //     return a.calo - b.calo;
-    // })
     append(data);
 }
 
@@ -834,7 +829,7 @@ setSelectedItem = (el,index) => {
     selectedItemsArr.push(el);
     localStorage.setItem('selectedItemsArr', JSON.stringify(selectedItemsArr));
 
-    appendBill(el,index, selectedItemsArr);
+    appendBill(selectedItemsArr);
 
 }
 
@@ -842,7 +837,7 @@ setSelectedItem = (el,index) => {
 // Appending data in Billing section.
 let billData = document.querySelector('.clicked-items');
 
-appendBill = (el,index, selectedItemsArr) => {
+appendBill = (selectedItemsArr) => {
 
     billData.innerHTML = null;
 
@@ -894,9 +889,6 @@ let adding_logo = document.querySelector('.adding');
 
 function clearAlldata () {
     billData.innerHTML = null;
-    // itemCount.innerText = 1;
-    // add_Button.style.display = 'none';
-    // adding_logo.style.display = 'flex';
 
     localStorage.removeItem('selectedItemsArr');
     
@@ -905,23 +897,92 @@ function clearAlldata () {
 
 
 // Delete one Item from Billing section.
-// function deleteItemFromBill(element) {
+function deleteItemFromBill(element) {
 
-//     let findName = element.name;
-//     let index;
-//     let data = JSON.parse(localStorage.getItem('selectedItemsArr')) || [];
+    let findName = element.name;
+    let index;
+    var dataForDelete = JSON.parse(localStorage.getItem('selectedItemsArr')) || [];
 
-//     for(let i=0;i<data.length;i++) {
-//         if(data.name == findName) {
-//             index = i;
-//         }
-//     }
+    for(let i=0;i<dataForDelete.length;i++) {
+        if(dataForDelete[i].name == findName) {
+            index = i;
+            break;
+        }
+    }
 
-//     if(index != null) {
-//         data.splice(index, 1);
-//     }
+    if(index != null) {
+        dataForDelete.splice(index, 1);
+    }
 
-//     appendBill(el,index, selectedItemsArr)
-//     // append(data);
+    localStorage.setItem('selectedItemsArr', JSON.stringify(dataForDelete));    
+}
+
+
+//close sidebar functionality in smallest screen
+
+openSideBar = () => {
+    sidebar.style.top = '0';
+}
+
+document.querySelector('.filterBtn').addEventListener('click', openSideBar)
+
+closeByCross = () => {
+    sidebar.style.top = '-100vh';
+}
+
+document.querySelector('.closeSideBar').addEventListener('click', closeByCross);
+
+
+// POP up window
+let detail_window = document.getElementById('detail-window');
+
+PopUpDetails = (el) => {
+
+    // let popupCloser = document.createElement('h1');
+    // popupCloser.className = 'popupCloser';
+    // popupCloser.innerText = '+';
+
+    let div1 = document.createElement('div');
+    div1.className = 'part1';
+
+    let div2 = document.createElement('div');
+    div2.className = 'part2';
     
-// }
+    let h3 = document.createElement('h3');
+    h3.className = 'h3Name';
+    h3.innerText = el.name;
+
+    let p = document.createElement('p');
+    p.className = 'pSubtitle';
+    p.innerText = el.subtitle;
+
+    div1.append(h3, p);
+
+    let img = document.createElement('img');
+    img.src = el.image;
+    img.className = 'popupImg';
+
+    let img_container = document.createElement('div');
+    img_container.className = 'popupImgContainer';
+    img_container.append(img);
+
+    let popupDetailContainer = document.createElement('h3');
+    popupDetailContainer.className = 'popupDetailContainer';
+    popupDetailContainer.innerText = "consectetur adipisicing elit. Fuga molestiae cupiditate ipsam veritatis eveniet incidunt, voluptatum eaque, consequuntur dolores numquam natus. Saepe quaerat repudiandae alias molestias quibusdam fugit nobis. Vel. Illo, soluta tempora. Dolore, amet, quae esse odit adipisci ut ipsum, dolorum consectetur obcaecati ab rem impedit officia voluptates illo suscipit. Fuga iste id excepturi hic esse dolorem aliquid quis";
+
+    div2.append(img_container, popupDetailContainer);
+    
+    let hr = document.createElement('hr');
+    hr.className = 'hr';
+
+    detail_window.append(div1, div2, hr);
+
+}
+
+closePopUp = () => {
+    // detail_window.innerHTML = null;
+    detail_window.style.display = 'none';
+}
+
+
+document.querySelector('.popupCloser').addEventListener('click', closePopUp);
