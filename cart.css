@@ -6,16 +6,17 @@ body {
 
 #full-page {
     width: 100%;
-    height: 600px;
+    height: fit-content;
     border: 0px solid red;
     position: relative;
+    opacity: rgba(248, 244, 244, 1);
 }
 
 /* Billing Section */
 
 #billing-section {
     width: 22%;
-    height: 600px;
+    height: 90vh;
     border: 0px solid blue;
     overflow: auto;
     position: absolute;
@@ -192,9 +193,18 @@ body {
     background-color: blue;
 }
 
+.filterBtn {
+    display: none;
+}
+
+.filterBtn:hover {
+    background-color: white;
+    color: blue;
+}
+
 #sidebar {
     width: 14%;
-    height: 500px;
+    height: 95vh;
     border: 0px solid blue;
     background-color: #fffdf7;
     position: absolute;
@@ -203,6 +213,21 @@ body {
     left: -14%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     overflow: auto;
+    /* z-index: -1; */
+}
+
+#mealsArrow {
+    font-size: 12px; 
+    margin-left: 20px;
+}
+
+.closeSideBar {
+    transform: rotate(45deg);
+    position: absolute;
+    right: 30px;
+    top: -10px;
+    font-size: 50px;
+    display: none;
 }
 
 #sidebar.active {
@@ -211,17 +236,20 @@ body {
 
 #sidebar button {
     margin: 15px 0 0 20px;
-    background-color: black;
+    background-color: blue;
     color: white;
     font-size: 17px;
     padding: 5px 17px;
     border-radius: 20px;
     border: none;
+    box-shadow: 1px 1px 5px 2px black;
+    border: 1px solid white;
+    
 }
 
 #sidebar button:active {
     scale: 0.95;
-    border: 2px solid white;
+    
 }
 
 .sidebarImg {
@@ -237,8 +265,8 @@ body {
 }
 
 #grid-container {
-    width: 75%;
-    height: 480px;
+    width: fit-content;
+    height: 90vh;
     border: 0px solid purple;
     background-color: #fffdf7;
     padding: 10px 5px;
@@ -347,32 +375,203 @@ body {
 }
 
 #detail-window {
-    width: 50%;
-    height: 450px;
-    background-color: antiquewhite;
+    width: 55%;
+    height: 85vh;
+    /* background-color:rgb(233, 182, 106); */
+    background-color: #fffdf7;
+    overflow: auto;
     position: absolute;
-    top: 50%;  
-    left: 50%; 
-    transform: translate(-50%, -50%);
+    top: 7vh;
+    left: 50vh;
+    /* transform: translate(-50%, -50%); */
     display: none;
+}
+
+.part1 {
+    width: 100%;
+    height: 25%;
+    border: 0px solid blue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.h3Name {
+    margin: 30px 0 0 30px;
+}
+.pSubtitle {
+    margin-left: 30px;
+}
+
+.part2 {
+    width: 100%;
+    height: 60%;
+    margin-top: 20px;
+    border: 0px solid green;
+    display: flex;
+    align-items:initial;
+    border: 0px solid green;
+}
+.popupImgContainer {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    border: 0px solid blue;
+}
+.popupDetailContainer {
+    width: 55%;
+    height: auto;
+    margin: 0 auto;
+    font-style: italic;
+}
+.popupImg {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.hr {
+    border: 2px solid grey;
+    margin-bottom: 30px;
+}
+
+/* This is inside popup window */
+.popupCloser {
+    font-size: 40px;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    transform: rotate(45deg);
+    cursor: pointer;
 }
 
 
 
 /* Media Queries */
 
-@media all and (max-width: 1300px) and (min-width:901px) {
-    /* Medium Screen Styles  */
+@media only screen and (max-width: 2000px){
     #grid-container {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
 }
 
 
-@media all and (max-width: 900px) and (min-width:200px) {
-  /* Small Screen Styles  */
-  #grid-container {
-    grid-template-columns: repeat(1,1fr);
-  }
+@media only screen and (max-width: 1300px){
+    #grid-container {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .cardDiv {
+        min-height: 370px;
+    }
+    .grid-container-class {
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+    
+}
 
+
+@media only screen and (max-width: 970px){
+    #grid-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .cardDiv {
+        min-height: 360px;
+    }
+    #billing-section {
+        width: 25%;
+    }
+    .grid-container-class {
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+    #billing-section > div:nth-child(1) {
+        margin-top: -2px;
+        padding-top: 3px;
+    }
+    #billing-section > div:nth-child(1) > div {
+        margin-left: 20px;
+        padding: 0 20px;
+        border-radius: 50px;
+    }
+    
+    #delievery-date {
+        margin-left: 16px;
+    }
+    
+    #clear {
+        left: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 770px){
+    #grid-container {
+        width: 100%;
+        margin: auto;
+        right: 0;
+        left: 0;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardDiv {
+        min-height: 360px; 
+    }
+    .grid-container-class {
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+    #billing-section {
+        width: 100%;
+        height: 90vh;
+        top: 130vh;
+        /* right: 0; */
+    }    
+    #billing-section > div:nth-child(1) {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    #billing-section > div:nth-child(1) > div {
+        margin-left: 50px;
+        padding: 0 20px;
+        height: 35%;
+        flex-wrap: wrap;
+    }
+    
+    #delievery-date {
+        margin-left: 16px;
+    }
+    
+    #clear {
+        left: 20px;
+    }
+    #sidebar {
+        width: 90%;
+        height: 100vh;
+        margin: auto;
+        z-index: 1;
+        top: -100vh;
+        left: 0;
+        padding-left: 50px;
+    }
+    #sidebar.active {
+        top: 0;
+    }
+    .closeSideBar {
+        display: block;
+    }
+    #navbar {
+        width: 100%;
+        height: 50px;
+    }
+    #below-navbar {
+        width: 100%;
+    }
+    #mealsArrow {
+        margin-left: 0px !important;
+    }
+    .filterBtn {
+        display: block;
+    }
+    #hide-filters {
+        display: none;
+    }
+}
+
+/* @media all and (max-width: 3000px) and (min-width:1301px) {
+    #grid-container {
+        grid-template-columns: repeat(4,1fr);
+    }
 };

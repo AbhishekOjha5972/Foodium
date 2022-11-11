@@ -16,7 +16,7 @@
         <div id="navbar">
             <a href=""> <i style="font-size: 12px;" class="fa-solid fa-less-than"></i> </a>
             <!-- <i class="fa-solid fa-delete-left"></i> -->
-            <h3>Meals <i style="font-size: 12px; margin-left: 20px;" class="fa-solid fa-greater-than"></i> </h3>
+            <h3>Meals <i id="mealsArrow" class="fa-solid fa-greater-than"></i> </h3>
             <a id="customer-support" href="">Customer Support</a>
         </div>
 
@@ -34,10 +34,12 @@
 
         <div id="below-navbar">
             <p>Choose Meals</p>
+            <button class="filterBtn">Filter</button>
             <button id="hide-filters">Sort & Filters</button>
         </div>
 
         <div id="sidebar">
+            <h1 class="closeSideBar">+</h1>
             <h2 style="margin-left: 20px;">Filter by:</h2>
             <p style="color: grey; margin-left: 20px;">(Select any one)</p>
 
@@ -82,7 +84,9 @@
 
         <div id="grid-container"></div>
 
-        <div id="detail-window"></div>
+        <div id="detail-window">
+            <h1 class="popupCloser">+</h1>
+        </div>
 
     </div>
 
