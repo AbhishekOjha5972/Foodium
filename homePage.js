@@ -65,3 +65,24 @@ loginEvent.addEventListener('click',()=>{
     window.location.href="loginAndSignup.html"
 })
 
+
+// -----------------Appending the user data into the home page-----------------
+
+const lsUserData=JSON.parse(localStorage.getItem('activeUser'));
+console.log('lsUserData:', lsUserData)
+console.log("check")
+const userDataAppend=document.querySelector('#rightDiv .loggedInUserData');
+const signUpPlace=document.getElementById('sign_Up');
+const logInPlace=document.getElementById('log_In');
+if(lsUserData==null){
+    userDataAppend.style.display='none'
+    // logInPlace.style.display='block';
+    // signUpPlace.style.display='block';
+}
+else{
+    logInPlace.style.display='none';
+    signUpPlace.style.display='none';
+    userDataAppend.style.display="block"
+    userDataAppend.textContent=lsUserData.first_name;
+}
+

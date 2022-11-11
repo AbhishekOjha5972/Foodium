@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <div id="full-page">
+
+        <div id="navbar">
+            <a href=""> <i style="font-size: 12px;" class="fa-solid fa-less-than"></i> </a>
+            <!-- <i class="fa-solid fa-delete-left"></i> -->
+            <h3>Meals <i style="font-size: 12px; margin-left: 20px;" class="fa-solid fa-greater-than"></i> </h3>
+            <a id="customer-support" href="">Customer Support</a>
+        </div>
+
+        <div id="billing-section"> 
+            <div>
+                <p id="delievery-date">Delievering to:</p>
+                <div>
+                    <p style="font-weight: bold;"> Wednesday, Nov 16</p>
+                </div>
+            </div>
+            <p id="clear">Clear All</p>
+
+            <div class="clicked-items"></div>
+        </div>
+
+        <div id="below-navbar">
+            <p>Choose Meals</p>
+            <button id="hide-filters">Sort & Filters</button>
+        </div>
+
+        <div id="sidebar">
+            <h2 style="margin-left: 20px;">Filter by:</h2>
+            <p style="color: grey; margin-left: 20px;">(Select any one)</p>
+
+            <button id="calories">Calories</button><br>
+            <button id="normal">Normal</button><br>
+
+            <hr style="margin-top: 40px;">
+
+            <h3 style="margin-left: 7px;">Categories ></h3>
+
+            <div class="sidebarImgDiv">
+                <img style="background-color: bisque;" class="sidebarImg" src="https://res.cloudinary.com/freshly/image/upload/v1626368012/production-weekly-menu-section-image-df7515f7-9745-497e-80f7-035d653ccaff.png" alt="Error">
+                <p>Purely Plant</p>
+            </div>
+
+            <div class="sidebarImgDiv">
+                <img style="background-color: green;" class="sidebarImg" src="https://res.cloudinary.com/freshly/image/upload/v1610576008/production-weekly-menu-section-image-cfe122a2-0a30-4276-af7e-87034e316e3e.png" alt="Error">
+                <p>Signature Collection</p>
+            </div>
+
+            <div class="sidebarImgDiv">
+                <img style="background-color: yellow;" class="sidebarImg" src="https://res.cloudinary.com/freshly/image/upload/v1610576009/production-weekly-menu-section-image-8dbbc60a-71ff-422b-bbbd-2f5f39723f52.png" alt="Error">
+                <p>Freshly Fit</p>
+            </div>
+
+            <div class="sidebarImgDiv">
+                <img style="background-color: pink;" class="sidebarImg" src="https://res.cloudinary.com/freshly/image/upload/v1617663486/production-weekly-menu-section-image-96c9cd78-c10d-493f-81f6-72f856ceed18.png" alt="Error">
+                <p>Protiens & Sides</p>
+            </div>
+
+            <hr>
+
+            <h3 style="color: green; margin-left: 7px">Nutritional macros</h3>
+            <ul style="font-size: 18px;">
+                <li>Calories</li>
+                <li>Carbs</li>
+                <li>Protein</li>
+                <li>Sodium</li>
+            </ul>
+
+        </div>
+
+        <div id="grid-container"></div>
+
+        <div id="detail-window"></div>
+
+    </div>
+
+</body>
+</html>
+
+<script src="cart.js"></script>

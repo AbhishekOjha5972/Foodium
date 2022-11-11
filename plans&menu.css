@@ -1,0 +1,486 @@
+body{
+   background-color: #333;
+}
+#asd{
+    border: 1px solid red;
+    height: 200px;
+    width: 80%;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    background: transparent;
+}
+#flexible_plan {
+   /* backdrop-filter:blur(20px);*/
+    margin: auto;
+    text-align: center;
+    max-width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+#flexible_plan h1 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #333333;
+    margin-bottom: 10px;
+    font-size: 2.375rem;
+    line-height: 1.16em;
+    margin-top: 5px;
+}
+
+#flexible_plan p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #333;
+}
+
+#meals {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+#meals div {
+    position: relative;
+    margin-right: 8px;
+    margin-left: 8px;
+    -webkit-box-flex: 1;
+}
+
+#meals div>img {
+    width: 100%;
+    height: auto;
+    max-height: 192px;
+    margin-bottom: 16px;
+}
+
+#meals div>p {
+    color: #357471;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2px;
+}
+
+#meals div>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 8px;
+    padding: 4px 8px;
+    border-radius: 600px;
+    background-color: #fce94e;
+    color: #357471;
+    font-size: 14px;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+#shipingtax {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+#shipingtax button {
+    padding: 13px 16px 12px;
+    background-color: #1349dd;
+    transition-duration: .4s;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.33em;
+    letter-spacing: .5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 0px;
+}
+
+#shipingtax button:hover {
+    font-size: larger;
+    cursor: pointer;
+}
+
+#onthemenu h1 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #333333;
+    margin-bottom: 10px;
+    font-size: 2.375rem;
+    line-height: 1.16em;
+    margin-top: 5px;
+    text-align: center;
+    /*margin-top: 80px;*/
+}
+
+#onthemenu {
+    width: 60%;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+}
+
+#selectfoodcatagory {
+    display: flex;
+    width: 20%;
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+#selectfoodcatagory label {
+    color: #8c8c8c;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+#selectfoodcatagory select {
+    margin-left: 6px;
+    height: 22px;
+    width: 150px;
+}
+
+#appendmenudiv {
+    width: 96%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    min-height: 100vh;
+
+}
+
+#appendmenudiv img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform .5s ease;
+}
+
+#appendmenudiv img:hover {
+    cursor: pointer;
+    /* transform: scale(1.5);*/
+
+}
+
+#appendmenudiv h1 {
+    color: #333;
+    font-size: 20px;
+    line-height: 1.25em;
+    font-weight: 700;
+}
+
+.caloriesdiv {
+    display: flex;
+
+}
+
+.caloriesdiv p {
+    margin-left: 5px;
+    color: #333;
+    margin-top: 0px;
+}
+
+#diet_lifestyle {
+    width: 52%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#diet_lifestyle h1 {
+    margin: 0 0 24px;
+    color: #333;
+    font-size: 2.5rem;
+    line-height: 1.08em;
+    font-weight: 700;
+}
+
+#diet_lifestyle p {
+    font-family: Favoritfreshly, sans-serif;
+    color: #333;
+    font-size: .850rem;
+    line-height: 1.43em;
+    font-weight: 400;
+}
+
+#food_catagory {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+#food_catagory img {
+    width: 90%;
+}
+
+#food_catagory h3 {
+    color: #333;
+    font-size: 1.5rem;
+    line-height: 1.08em;
+    font-weight: 700;
+}
+
+#food_catagory p {
+    font-family: Favoritfreshly, sans-serif;
+    color: #333;
+    font-size: .850rem;
+    line-height: 1.43em;
+    font-weight: 400;
+}
+
+#food_catagory div {
+    width: 90%;
+}
+
+#common_question {
+    width: 80%;
+    margin: auto;
+
+}
+
+.question {
+    box-sizing: border-box;
+    margin-top: 16px;
+    /* margin-bottom: 10px;*/
+    font-size: 16px;
+    line-height: 1.25em;
+    font-weight: 700;
+    cursor: pointer;
+    color: #3167ff;
+
+    font-family: Favoritfreshly, sans-serif;
+}
+
+.answer {
+    display: none;
+    margin-top: 0px;
+    transition: max-height 1.4s ease;
+}
+
+#common_question_heading {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.08em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.question span {
+    margin-left: 95%;
+    color: #333333;
+}
+
+.arrow_image {
+    width: 15px;
+    transition: transform 0.2s ease-in;
+}
+
+.question.active .arrow_image {
+    transform: rotate(180deg);
+}
+
+.menu_pop_up {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background: rgba(0,0,0,0.55); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.menu_popup_append_div {
+    position: fixed;
+    z-index: 7000;
+    overflow: auto;
+    width: 700px;
+    height: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0;
+    background-color: white;
+    color: #333;
+    display: none;
+}
+
+.titleinfo {
+    width: 90%;
+    line-height: 10px;
+    margin: auto;
+    color: #333;
+    text-transform: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.benifit_div {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+
+.benifit_div p {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 6px 10px;
+    border-radius: 100px;
+    background-color: #b8fffa;
+    font-family: Favoritfreshly, sans-serif;
+    color: #333;
+    font-size: .75rem;
+    line-height: 1em;
+    font-weight: 400;
+}
+
+.imgdiv {
+
+    height: 450px;
+    display: flex;
+}
+
+div.imgdiv {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.imgappenddiv {
+
+    flex: 5;
+    height: 450px;
+}
+
+.description {
+
+    flex: 5;
+    height: 450px;
+    align-items: center;
+
+}
+
+.imgappenddiv img {
+    width: 95%;
+    margin-top: 10px;
+
+}
+
+.description h4 {
+    text-align: center;
+}
+
+.description p {
+    line-height: 20px;
+}
+
+.nutrition {
+
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nutrition p {
+    font-size: larger;
+    line-height: 10px;
+    font-weight: 200;
+}
+
+#imagecross {
+    width: 10px;
+    margin-left: 95%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+#footer {
+    width: 70%;
+    margin: auto;
+    border: 1px solid red;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.footersubdiv{
+    width: 33%;
+    margin: auto;
+    border: 1px solid black;
+    height: 400px;    
+}
+.footersubdiv div:first-child{
+    width: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1100px) and (min-width:601px) {
+
+    /* Medium Screen Styles  */
+    #meals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #appendmenudiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media all and (max-width: 601px) and (min-width:200px) {
+
+    /* Small Screen Styles  */
+    #meals {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #appendmenudiv {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}

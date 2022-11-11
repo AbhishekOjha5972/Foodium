@@ -1,0 +1,378 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#full-page {
+    width: 100%;
+    height: 600px;
+    border: 0px solid red;
+    position: relative;
+}
+
+/* Billing Section */
+
+#billing-section {
+    width: 22%;
+    height: 600px;
+    border: 0px solid blue;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#billing-section > div:nth-child(1) {
+    width: 100%;
+    height: 15%;
+    margin-top: -5px;
+    padding-top: 7px;
+    border: 0px solid red;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#billing-section > div:nth-child(1) > div {
+    width: fit-content;
+    height: 35%;
+    margin-left: 10px;
+    padding: 0 10px;
+    border: 1px solid grey;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#delievery-date {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#clear {
+    font-size: 14px;
+    text-decoration: underline;
+    color: blue;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    border: 0px solid red;
+}
+
+.clicked-items {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    border: 0px solid green;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow-y: auto;
+}
+
+.one_item_bill {
+    width: 95%;
+    height: 80px;
+    margin: 0 auto 15px auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.one_item_bill:hover {
+    background-color: antiquewhite;
+}
+
+.bill_image_container img {
+    width: 100%;
+    height: 70%;
+    scale: 1.4;
+    box-shadow: 1px 1px 2px 5px grey;
+}
+
+.bill_image_container {
+    width: 25%;
+    height: 75%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub_container {
+    width: 60%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_container {
+    width: 10%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid red;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+/* .addMoreItem {
+    
+} */
+
+/* .deleteThisItem {
+    color: red;
+} */
+
+
+/* Navbar */
+#navbar {
+    width: 77.8%;
+    height: 50px;
+    border: 0px solid green;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+#navbar a {
+    font-size: 20px;
+    text-decoration: none;
+    color: blue;
+}
+
+#navbar > a:nth-child(1) {
+    margin-left: 20px;
+}
+
+/* #navbar > a:nth-child(2) */
+#customer-support {
+    margin-right: 20px;
+}
+
+#below-navbar {
+    width: 77.8%;
+    height: 50px;
+    background-color: #fffdf7;
+    border: 0px solid grey;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+#below-navbar button {
+    margin-right: 20px;
+    font-weight: bold;
+    color: blue;
+    border: none;
+    height: 95%;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+#below-navbar p {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#below-navbar button:hover {
+    color: white;
+    background-color: blue;
+}
+
+#sidebar {
+    width: 14%;
+    height: 500px;
+    border: 0px solid blue;
+    background-color: #fffdf7;
+    position: absolute;
+    top: 103px;
+    transition: 0.4s;
+    left: -14%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: auto;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar button {
+    margin: 15px 0 0 20px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    padding: 5px 17px;
+    border-radius: 20px;
+    border: none;
+}
+
+#sidebar button:active {
+    scale: 0.95;
+    border: 2px solid white;
+}
+
+.sidebarImg {
+    width: 36px;
+    height: 36px;
+    margin: 0 7px 0 7px;
+}
+
+#sidebar .sidebarImgDiv {
+    display: flex;
+    align-items: center;
+    border: 0px solid red;
+}
+
+#grid-container {
+    width: 75%;
+    height: 480px;
+    border: 0px solid purple;
+    background-color: #fffdf7;
+    padding: 10px 5px;
+    position: absolute;
+    right: 23%;
+    top: 103px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    overflow-y: scroll;
+    transition: 0.4s;
+}
+
+.grid-container-class {
+    grid-template-columns: repeat(3,1fr) !important;
+}
+
+.cardDiv {
+    border: 0px solid red;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: white;
+    position: relative;
+    min-height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.cardDiv > div:nth-child(1) {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cardDiv > .adding {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    background-color: rgb(42, 108, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+.adding:hover {
+    background-color: rgb(13, 69, 173);
+}
+
+.adding_Button {
+    width: 85px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid grey;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    transition: 0.1s;
+    padding-right: 13px;
+    display: none;
+}
+
+.adding_Button > p:nth-child(1) {
+    margin: 0 0 28px 0;
+}
+
+/* .adding_Button > p:nth-child(2) */
+.count {
+    margin: 0 0 0 12px;
+    font-size: 20px;
+}
+
+/* .adding_Button > p:nth-child(3) */
+.adding_Button p + p {
+    margin-left: -7px;
+    font-size: 25px;
+}
+
+.cardDiv:hover img{
+    scale: 1.2;
+}
+
+.cardDiv > div > img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    transition: 0.5s;
+}
+
+.cardDiv h3 {
+    padding-left: 15px;
+}
+
+.cardDiv p {
+    padding-left: 15px;
+}
+
+#detail-window {
+    width: 50%;
+    height: 450px;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+
+/* Media Queries */
+
+@media all and (max-width: 1300px) and (min-width:901px) {
+    /* Medium Screen Styles  */
+    #grid-container {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+@media all and (max-width: 900px) and (min-width:200px) {
+  /* Small Screen Styles  */
+  #grid-container {
+    grid-template-columns: repeat(1,1fr);
+  }
+
+};

@@ -1,12 +1,351 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#authentication-Main_Container{
-width: 100%;
-height: 100vh;
+
+#authentication-Main_Container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://res.cloudinary.com/freshly/image/upload/c_crop,g_auto,dpr_auto,q_30,w_1500,h_900/v1494958610/joinnow-southchicken.jpg");
+    display: flex;
 }
-#authentication-Main_Container_IMG{
+
+#authentication-Main_Container_IMG {
     width: 100%;
     height: fit-content;
 }
+
+#authentication-Main_Container_FirstChild {
+    height: 60%;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    /* opacity: 0.7; */
+    padding: 30px;
+}
+
+
+
+#Auth_signup-Container {
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 100%;
+    /* display: none; */
+}
+
+#Auth_signup-Container h1 {
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+#Auth_signup-Container h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+#Auth_signup-Container #signin-firstDiv {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#Auth_signup-Container #firstName {
+    width: 47%;
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 5px;
+    border: 1px solid rgb(48, 48, 48);
+    font-size: 20px;
+}
+
+#Auth_signup-Container #lastName {
+    width: 47%;
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 5px;
+    border: 1px solid rgb(48, 48, 48);
+    font-size: 20px;
+}
+
+#Auth_signup-Container #signin-secondDiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+#Auth_signup-Container #signin-secondDiv>#email {
+    width: 35%;
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 5px;
+    border: 1px solid rgb(48, 48, 48);
+    font-size: 20px;
+}
+
+#Auth_signup-Container #signin-secondDiv>#number {
+    width: 35%;
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 5px;
+    border: 1px solid rgb(48, 48, 48);
+    font-size: 20px;
+}
+
+#Auth_signup-Container #signin-secondDiv>#continue {
+    width: 20%;
+    height: 45px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(42, 109, 255);
+    border: none;
+    outline: none;
+}
+
+#Auth_signup-Container #signin-secondDiv>#continue:hover {
+    color: white;
+    background-color: rgb(6, 80, 241);
+}
+
+#Auth_signup-Container p {
+    margin-bottom: 20px;
+}
+
+/* login styling */
+#Auth_login-Container {
+    display: flex;
+    flex-direction: column;
+   display: none;
+
+}
+
+
+#Auth_login-Container #Auth-Logodiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Auth_login-Container #Auth-Logodiv>img {
+    height: 50px;
+    width: 50px;
+}
+
+#Auth-Logodiv>span {
+    font-size: 50px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+#Auth_login-Container h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+#Auth-ContentDiv {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Auth-ContentDiv input {
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+#Auth-ContentDiv button {
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    background-color: rgb(42, 109, 255);
+    color: white;
+    font-size: 18px;
+    border: none;
+    /* opacity: 1  ; */
+}
+
+#Auth-ContentDiv button:hover {
+    background-color: rgb(6, 80, 241);
+}
+
+#Auth-ContentDiv>div {
+    display: flex;
+    justify-content: space-between;
+}
+#Auth-ContentDiv label{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+/* Responsiveness  */
+
+@media screen and (min-width:775px) and (max-width:990px) {
+    #authentication-Main_Container_FirstChild {
+        height: 55%;
+        width: 80%;
+        margin: auto;
+        background-color: white;
+        /* opacity: 0.7; */
+        padding: 30px;
+        transition: .08s;
+    }
+}
+
+@media screen and (min-width:404px) and (max-width:779px) {
+
+    #authentication-Main_Container_FirstChild {
+        height: 80%;
+        width: 80%;
+        padding: 30px;
+        transition: .08s;
+    }
+
+
+    #Auth_signup-Container #signin-firstDiv {
+        flex-direction: column;
+        transition: .8s;
+    }
+
+    #Auth_signup-Container #signin-secondDiv {
+        flex-direction: column;
+    }
+
+    #Auth_signup-Container #signin-firstDiv>input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #Auth_signup-Container #signin-secondDiv>#email {
+        width: 100%;
+        margin-bottom: 15px;
+
+    }
+
+    #Auth_signup-Container #signin-secondDiv>#number {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #Auth_signup-Container #signin-secondDiv>#continue {
+        width: 100%;
+    }
+
+    #Auth_signup-Container h1 {
+        margin-bottom: 20px;
+        font-size: 45px;
+    }
+
+    #Auth_signup-Container h2 {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+
+    #Auth_signup-Container #signin-secondDiv {
+        margin-top: -15px;
+    }
+}
+
+
+
+@media screen and (min-width:150px) and (max-width:403px) {
+
+    #authentication-Main_Container_FirstChild {
+        height: 80%;
+        width: 90%;
+        transition: .08s;
+    }
+
+
+    #Auth_signup-Container #signin-firstDiv {
+        flex-direction: column;
+        transition: .8s;
+    }
+
+    #Auth_signup-Container #signin-secondDiv {
+        flex-direction: column;
+    }
+
+    #Auth_signup-Container #signin-firstDiv>input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #Auth_signup-Container #signin-secondDiv>#email {
+        width: 100%;
+        margin-bottom: 15px;
+
+    }
+
+    #Auth_signup-Container #signin-secondDiv>#number {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #Auth_signup-Container #signin-secondDiv>#continue {
+        width: 100%;
+    }
+
+    #Auth_signup-Container h1 {
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+
+    #Auth_signup-Container h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    #Auth_signup-Container #signin-secondDiv {
+        margin-top: -15px;
+    }
+
+
+}
+
+/* Auth login responsiveness */
+@media screen and (min-width:404px) and (max-width:779px) {
+
+    #authentication-Main_Container_FirstChild {
+        height: 70%;
+        width: 90%;
+        transition: .08s;
+    }
+
+    #Auth_login-Container {
+        padding: 10px;
+    }
+
+    #Auth_login-Container label {
+        margin-bottom: 5px;
+    }
+
+    #Auth_login-Container #Auth-ContentDiv>div {
+        flex-direction: column;
+        transition: .4s;
+    }
+
+    #Auth_login-Container #Auth-ContentDiv>div>a {
+        margin-bottom: 10px;
+    }
+
+    #Auth_login-Container #Auth-ContentDiv>h1 {
+        margin-bottom: 30px;
+    }
+
+}
+
+

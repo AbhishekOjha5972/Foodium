@@ -52,7 +52,7 @@ const mainNavbarContainer = () =>{
                 <button class="navbar-Icon_Change">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-
+                <button class="loggedInUserData"></button>
             </div>
         </div>
     </div>`
