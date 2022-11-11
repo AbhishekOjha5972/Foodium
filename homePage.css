@@ -175,7 +175,11 @@
     text-align: center;
     margin: 40px 0;
     /* border: 1px solid red; */
-    font-size:28px;
+    /* font-size: 58px; */
+}
+
+#HowITWorks_ChildOne>h1 {
+    font-size: 40px;
 }
 
 #HowITWorks_ChildTwo {
@@ -199,7 +203,7 @@
     /* width: 70%; */
     height: 140px;
     width: 190px;
-   
+
 
 }
 
@@ -207,7 +211,7 @@
     /* width: 70%; */
     height: 140px;
     width: 190px;
-   
+
 
 }
 
@@ -215,7 +219,7 @@
     /* width: 70%; */
     height: 170px;
     width: 170px;
- 
+
 
 }
 
@@ -223,22 +227,22 @@
     /* width: 70%; */
     height: 150px;
     width: 150px;
-   
+
 
 }
 
 #HowITWorks_ChildTwo>div {
     text-align: center;
 }
-#HowITWorks_ChildTwo >div >h2
-{
+
+#HowITWorks_ChildTwo>div>h2 {
     margin: 20px 0 10px 0;
 
 }
 
 /* On the Menu section */
 
-#ContentBody-On_the_Menu{
+#ContentBody-On_the_Menu {
     background-image: url("https://assets-global.website-files.com/5d03b4e130118314af624b20/61f127577dd58a9659fa4545_22_Homepage_OntheMenu_BG_1440%20x%20890.jpg");
     width: 100%;
     height: 850px;
@@ -248,7 +252,8 @@
     justify-content: center;
     align-items: center;
 }
-#on_The_Menu_Container{
+
+#on_The_Menu_Container {
     width: 60%;
     height: 90%;
     /* border: 5px solid red; */
@@ -258,68 +263,80 @@
     background-color: white;
 
 }
-#on_The_Menu_Content{
+
+#on_The_Menu_Content {
     width: 90%;
     /* border: 1px solid green; */
 
 }
-#OTM-Fisrt_Child{
+
+#OTM-Fisrt_Child {
     width: 100%;
     /* border: 1px solid blue; */
     margin-bottom: 5%;
 }
-#OTM-Fisrt_Child > h1{
+
+#OTM-Fisrt_Child>h1 {
     font-size: 50px;
 }
-#OTM-Fisrt_Child > p{
+
+#OTM-Fisrt_Child>p {
     font-size: 17px;
     margin-top: 10px;
 }
-#OTM-Second_Child{
+
+#OTM-Second_Child {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px 20px;
 }
-#OTM-Second_Child > div >div >img{
+
+#OTM-Second_Child>div>div>img {
     width: 100%;
 }
-#OTM-Second_Child div > div{
+
+#OTM-Second_Child div>div {
     border-radius: 15px;
     overflow: hidden;
     width: 100%;
 }
-#OTM-Second_Child > div >div >img{
+
+#OTM-Second_Child>div>div>img {
     width: 100%;
     border-radius: 15px;
- transition: transform .3s ease-out;
+    transition: transform .3s ease-out;
 
 }
-#OTM-Second_Child > div >div >img:hover{
- transform: scale(1.1);
- transition: transform .3s ease-in;
+
+#OTM-Second_Child>div>div>img:hover {
+    transform: scale(1.1);
+    transition: transform .3s ease-in;
 }
-#OTM-Second_Child h2{
- font-size: 17px;
- margin-top: 10px;
+
+#OTM-Second_Child h2 {
+    font-size: 17px;
+    margin-top: 10px;
 }
-#OTM-Second_Child p{
+
+#OTM-Second_Child p {
     font-size: 14px;
     margin-top: 5px;
-   }
+}
 
-#OTM-Third_Child{
+#OTM-Third_Child {
     margin-top: 5%;
     /* border: 3px solid blue; */
     height: 40px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    background-color:rgb(42,109,255) ;
-    
-    
+    background-color: rgb(42, 109, 255);
+
+
 }
-#OTM-Third_Child > div {
+
+#OTM-Third_Child>div {
     width: 100%;
     height: 100%;
     display: flex;
@@ -328,16 +345,533 @@
     font-size: 20px;
     font-weight: 600;
     /* border: 1px solid blue; */
-    background-color:rgb(42,109,255) ;
-    transition:.3s ease-out;
+    background-color: rgb(42, 109, 255);
+    transition: .3s ease-out;
 }
+
 #OTM-Third_Child a {
     color: white;
 }
 
-#OTM-Third_Child > div:hover {
-    margin: -3px -3px 3px  3px;
-    transition:.3s ease-in;
+#OTM-Third_Child>div:hover {
+    margin: -3px -3px 3px 3px;
+    transition: .3s ease-in;
+}
+
+/* resonsive carousel for one the menu section */
+.main-carousel {
+    height: 300px;
+    background-color: rgb(255, 249, 235);
+    display: none;
+}
+
+.main-carousel .cell {
+    width: 260px;
+    height: 230px;
+    margin: 10px 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    /* border: 1px solid red; */
+    background-color: white;
+    /* padding: 10px; */
+}
+
+.main-carousel .cell img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.main-carousel .cell h2 {
+    margin-top: 5px;
+    font-size: 17px;
+
+
+}
+
+#our-fan-favorites {
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 200px;
+    background-color: rgb(255, 249, 235);
+    display: none;
+}
+
+#our-fan-favorites>h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#our-fan-favorites>p {
+    /* font-size: 17px; */
+    margin-top: 10px;
+    text-align: center;
+}
+
+#viewPlansAndMenu {
+    /* border: 1px solid red; */
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    display: none;
+    justify-content: center;
+
+}
+
+#viewPlansAndMenu>a {
+    width: 200px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+    color: white;
+    background-color: rgb(42, 109, 255);
+    font-size: 17px;
+}
+
+/* Flexible plans that fit your life */
+#Flesible-Plans_That_Fit_Your_Life {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+#FPTFYL-FirstChild {
+    /* border: 1px solid blue; */
+    width: 100%;
+    /* height: 150px; */
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+
+#FPTFYL-FirstChild>div {
+    /* border: 1px solid blue; */
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#FPTFYL-FirstChild>div>h1 {
+    font-size: 40px;
+    margin: 10px 0 15px 0;
+    color: rgb(48, 48, 48);
+}
+
+#FPTFYL-FirstChild>div>p {
+
+    color: rgb(48, 48, 48);
+}
+
+#FPTFYL-SecondChild {
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+#FPTFYL-SecondChild>div {
+    /* position: relative; */
+    width: 98%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+#FPTFYL-SecondChild>div>div {
+    position: relative;
+
+}
+
+#FPTFYL-SecondChild>div>div>div>img {
+    width: 100%;
+}
+
+#FPTFYL-SecondChild>div>div>span {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    background-color: rgb(252, 233, 78);
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 10px;
+    color: rgb(53, 116, 113);
+}
+
+#FPTFYL-SecondChild>div>div>h2 {
+
+    color: rgb(53, 116, 113);
+    font-size: 30px;
+}
+
+#FPTFYL-ThirdChild {
+    position: relative;
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+
+
+}
+
+#FPTFYL-ThirdChild>div {
+    width: 50%;
+    /* border: 1px solid blue; */
+    text-align: center;
+
+}
+
+#FPTFYL-ThirdChild>div>div {
+    margin: auto;
+    height: 40px;
+    margin-top: 30px;
+    width: 20%;
+    /* height: 10; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    /* border: 1px solid blue; */
+    background-color: rgb(42, 109, 255);
+    transition: .3s ease-out;
+}
+
+#FPTFYL-ThirdChild>div>div>a {
+    color: white;
+    /* border: 1px solid black; */
+    background-color: rgb(42, 109, 255);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#FPTFYL-ThirdChild>div>div>a:hover {
+    margin: -3px -3px 3px 3px;
+    transition: .3s ease-in;
+}
+
+/* What Others Are Saying */
+
+
+/* PRODUCTS */
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    /* border: 1px solid red; */
+}
+
+#product-category {
+    padding: 0 10vw;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    /* border: 5px solid red; */
+    margin-top: 40px;
+    color: rgb(48, 48, 48);
+    text-align: center;
+}
+
+.product-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* border: 1px solid red; */
+}
+
+.product-card>div {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
+}
+
+.product-card>div>img {
+    width: 170px;
+    /* border: 1px solid blue; */
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 310px;
+    margin-right: 40px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.product h2 {
+    font-size: 22px;
+    color: rgb(48, 48, 48);
+    margin: 30px 0 10px 0;
+}
+
+.product h3 {
+    font-size: 18px;
+    color: rgb(48, 48, 48);
+    margin: 10px 0 10px 0;
+}
+
+.pre-btn,
+.nxt-btn {
+    border: none;
+    width: 11vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+    background-color: white;
+}
+
+.pre-btn {
+    left: 0;
+}
+
+.nxt-btn {
+    right: 0;
+}
+
+.pre-btn i {
+    font-size: 20px;
+    margin-top: 300px;
+}
+
+.nxt-btn i {
+    font-size: 20px;
+    margin-top: 300px;
+}
+
+/* We believe eating right should be easy for everyone. */
+
+#We-believe-eating-right-should-be-easy-for-everyone {
+    position: relative;
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 700px;
+    margin-top: 50px;
+}
+
+#We-believe-eating-right-should-be-easy-for-everyone>div:nth-child(1) {
+    display: flex;
+    height: 100%;
+
+}
+
+#WBERSBEFE-blackDiv {
+    width: 35%;
+    /* border: 1px solid blue; */
+}
+
+#WBERSBEFE-BackgroundDiv {
+    width: 65%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    background-image: url("https://assets-global.website-files.com/5d03b4e130118314af624b20/61f1275059fd961964f53287_22_Homepage_EatingBetterEasy_BG_866x708.jpg");
+    background-size: 1000px;
+}
+
+#WBERSBEFE-ContentDiv {
+    position: absolute;
+    top: 200px;
+    left: 95px;
+    width: 700px;
+    height: 270px;
+    background-color: white;
+    padding: 20px 30px;
+}
+
+#WBERSBEFE-ContentDiv>h1 {
+    font-size: 50px;
+    color: rgb(48, 48, 48);
+    margin: 10px 0 10px 0;
+}
+
+#WBERSBEFE-ContentDiv>p {
+    font-size: 18px;
+    color: rgb(48, 48, 48);
+}
+
+#WBERSBEFE-ContentDiv>div {
+    width: 150px;
+    /* border: 1px solid pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 20px 0 20px 0;
+    background-color: rgb(42, 109, 255);
+}
+
+#WBERSBEFE-ContentDiv>div>a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(42, 109, 255);
+    transition: .3s ease-out;
+    color: white;
+    font-size: 18px;
+}
+
+#WBERSBEFE-ContentDiv>div>a:hover {
+    margin: -3px -3px 3px 3px;
+    transition: .3s ease-in;
+}
+
+
+/* Healthy Meals Delivered Weekly */
+#Healthy-meals-delivered-weekly {
+    position: relative;
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 800px;
+    margin-top: 50px;
+    /* display: none; */
+}
+
+#Healthy-meals-delivered-weekly>div:nth-child(1) {
+    display: flex;
+    height: 100%;
+    /* border: 1px solid red; */
+
+}
+
+#HMDW-BackgroundDiv {
+    width: 65%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    background-image: url("https://assets-global.website-files.com/5d03b4e130118314af624b20/61f1274f0c096f517bb89ed5_22_Homepage_HealthyMealsDelivered_866x708.jpg");
+    background-size: 1000px;
+}
+
+#HMDW-blackDiv {
+    width: 35%;
+    /* border: 1px solid blue; */
+}
+
+#HMDW-ContentDiv {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 100px;
+    right: 95px;
+    width: 700px;
+    height: 470px;
+    background-color: white;
+    padding: 20px 30px;
+}
+
+#HMDW-ContentDiv div>h1 {
+    font-size: 50px;
+    color: rgb(48, 48, 48);
+    margin: 10px 0 10px 0;
+    width: 80%;
+}
+
+#HMDW-ContentDiv div>div:nth-child(2) {
+    width: 100%;
+    /* height: 200px; */
+    /* border:1px solid red; */
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+}
+
+#HMDW-ContentDiv div>div:nth-child(2)>input {
+    height: 45px;
+    /* border: 3px solid yellow; */
+    width: 80%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid gray;
+}
+
+#HMDW-ContentDiv div>div:nth-child(2)>input:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+#HMDW-ContentDiv>div>div:nth-child(3) {
+    width: 350px;
+    /* border: 1px solid pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    margin: 20px 0 20px 0;
+    /* background-color: rgb(42, 109, 255); */
+}
+
+#HMDW-ContentDiv>div>div:nth-child(3)>a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(42, 109, 255);
+    transition: .3s ease-out;
+    color: white;
+    font-size: 18px;
+}
+
+#HMDW-ContentDiv>div>div:nth-child(3)>a:hover {
+    margin: -3px -3px 3px 3px;
+    transition: .3s;
+
+}
+
+#HMDW-ContentDiv>div>p {
+    margin-top: 10px;
+}
+
+#InvestorsArea {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(247, 247, 247);
+}
+
+#InvestorsArea>div {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    background-color: rgb(247, 247, 247);
+    padding: 60px 0;
+}
+
+#InvestorsArea>div>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#InvestorsArea>div>div>img {
+width: 100%;
 }
 
 /* Responsiveness  */
@@ -577,13 +1111,14 @@
 
 
 
+
 /* How it works responsiveness  */
 
 @media screen and (min-width:767px) and (max-width:1000px) {
     #Contentbody-HowItWorks {
-     position: absolute;
-     top: 700px;
-     /* transition: .3s; */
+        position: absolute;
+        top: 700px;
+        /* transition: .3s; */
     }
 
     #HowITWorks_ChildTwo {
@@ -596,9 +1131,9 @@
 
 @media screen and (min-width:280px) and (max-width:765px) {
     #Contentbody-HowItWorks {
-     position: absolute;
-     top: 340px;
-     /* transition: .3s; */
+        position: absolute;
+        top: 340px;
+        /* transition: .3s; */
     }
 
     #HowITWorks_ChildTwo {
@@ -615,24 +1150,218 @@
 
 
 
-    #ContentBody-On_the_Menu{
+    #ContentBody-On_the_Menu {
         /* position: absolute; */
-        position:absolute;
+        position: absolute;
         top: 1600px;
         width: 100%;
         height: 850px;
         background-size: 100% 100%;
     }
 
-    #OTM-Second_Child{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 20px 20px;
-    }
-    #on_The_Menu_Container{
+    #on_The_Menu_Container {
         width: 80%;
         height: 90%;
         transition: .5s;
+    }
+
+    #on_The_Menu_Content {
+        width: 90%;
+        /* border: 1px solid green; */
+
+    }
+
+    #on_The_Menu_Content {
+        width: 90%;
+        /* border: 1px solid green; */
+
+    }
+
+    #OTM-Second_Child {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 20px;
+    }
+}
+
+
+@media screen and (min-width:200px) and (max-width:766px) {
+
+    #ContentBody-On_the_Menu {
+        display: none;
+    }
+
+    #our-fan-favorites {
+        display: block;
+        position: relative;
+        top: 1800px;
+    }
+
+    .main-carousel {
+        display: block;
+        position: absolute;
+        margin-top: 1750px;
+        transition: .3s;
+    }
+
+    #viewPlansAndMenu {
+        display: block;
+        justify-content: center;
+        display: flex;
+        transition: .3s;
+        margin-top: 0px;
+        height: 100px;
+        align-items: center;
+        /* z-index: 100; */
+        background-color: rgb(255, 249, 235);
+    }
+
+}
+
+
+/* Flexible plans that fit your life */
+
+@media screen and (min-width:767px) and (max-width:1000px) {
+
+    #Flesible-Plans_That_Fit_Your_Life {
+
+        position: relative;
+        top: 2450px;
+    }
+
+    #FPTFYL-SecondChild>div>div>span {
+        font-size: 14px;
+    }
+
+    #FPTFYL-SecondChild>div>div>h2 {
+        transition: .3s;
+        font-size: 22px;
+    }
+
+    #FPTFYL-ThirdChild>div {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    #Flesible-Plans_That_Fit_Your_Life {
+        display: none;
+    }
+}
+
+
+/* What Others Are Saying  */
+
+
+@media screen and (min-width:767px) and (max-width:1000px) {
+
+    .product {
+        position: relative;
+        top: 2400px;
+        transition: .3s;
+
+    }
+}
+
+
+@media screen and (max-width:767px) {
+
+    .product {
+        display: none;
+    }
+}
+
+
+/* We believe eating right should be easy for everyone. */
+@media screen and (min-width:775px) and (max-width:1000px) {
+
+
+    #We-believe-eating-right-should-be-easy-for-everyone {
+        position: relative;
+        top: 2500px;
+    }
+
+    #WBERSBEFE-blackDiv {
+        display: none;
+
+    }
+
+    #WBERSBEFE-BackgroundDiv {
+        width: 100%;
+        transition: .4s;
+    }
+
+    #WBERSBEFE-ContentDiv {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 600px;
+    }
+
+}
+
+@media screen and (max-width:774px) {
+    #We-believe-eating-right-should-be-easy-for-everyone {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width:775px) and (max-width:1000px) {
+
+
+    #Healthy-meals-delivered-weekly {
+        position: relative;
+        top: 2500px;
+    }
+
+    #HMDW-blackDiv {
+        display: none;
+
+    }
+
+    #HMDW-BackgroundDiv {
+        width: 100%;
+        transition: .4s;
+    }
+
+    #HMDW-ContentDiv {
+        position: absolute;
+        width: 600px;
+        right: 0;
+        /* left: 10%; */
+    }
+
+}
+
+@media screen and (max-width:774px) {
+    #Healthy-meals-delivered-weekly {
+        display: none;
+    }
+}
+
+/* Investors Page  */
+
+@media screen and (min-width:774px) and (max-width:1000px) {
+    #InvestorsArea {
+        position: relative;
+        top: 2500px;
+    }
+
+    #InvestorsArea>div {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    #InvestorsArea>div>div {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:774px) {
+    #InvestorsArea {
+        display: none;
     }
 }

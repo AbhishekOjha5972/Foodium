@@ -8,7 +8,10 @@
     <title>foodium.com</title>
     <link rel="stylesheet" href="./Components/navbar.css">
     <link rel="stylesheet" href="homePage.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="./Components/footer.css">
     <script src="https://kit.fontawesome.com/d7fb88724e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -124,40 +127,52 @@
                 </div>
                 <div id="OTM-Second_Child">
                     <div>
-                        <div><img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb765dff2da0c2e1fb_635823f4ce4929328b1f96f9_production-meal-image-9e969581-d09c-4617-9b17-d455d23c8952.jpeg" alt=""></div>
+                        <div><img
+                                src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb765dff2da0c2e1fb_635823f4ce4929328b1f96f9_production-meal-image-9e969581-d09c-4617-9b17-d455d23c8952.jpeg"
+                                alt=""></div>
                         <h2>BBQ Bison Burger*</h2>
                         <p>610 Cal | Gluten Free | Single-Serve</p>
                     </div>
                     <div>
-                        <div><img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb8cd4f9d87ba86916_635823f4ce492977d91f974a_production-meal-image-f0de55be-d691-4ade-bc26-b4a8aedaa1fe.jpeg" alt=""></div>
+                        <div><img
+                                src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb8cd4f9d87ba86916_635823f4ce492977d91f974a_production-meal-image-f0de55be-d691-4ade-bc26-b4a8aedaa1fe.jpeg"
+                                alt=""></div>
                         <h2>Sausage Baked Penne</h2>
                         <p>470 Cal | Gluten Free | Single-Serve</p>
                     </div>
                     <div>
-                        <div><img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb5ae22f4680ff53d8_635823f4ce492947161f9738_production-meal-image-e4122aa8-0fe7-4854-b6f5-e27e0c5be918.jpeg" alt=""></div>
+                        <div><img
+                                src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb5ae22f4680ff53d8_635823f4ce492947161f9738_production-meal-image-e4122aa8-0fe7-4854-b6f5-e27e0c5be918.jpeg"
+                                alt=""></div>
                         <h2>Homestyle Chicken</h2>
                         <p>560 Cal | Gluten Free | Single-Serve</p>
                     </div>
                     <div>
-                        <div><img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb8b1f5aa9b139be56_635823f4ce492904901f973e_production-meal-image-c9eef45a-97a9-487c-9550-71488e5f639a.jpeg" alt=""></div>
+                        <div><img
+                                src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb8b1f5aa9b139be56_635823f4ce492904901f973e_production-meal-image-c9eef45a-97a9-487c-9550-71488e5f639a.jpeg"
+                                alt=""></div>
                         <h2>Cauliflower Whell Beef Bolognese</h2>
                         <p>490 Cal | Gluten Free | Single-Serve</p>
                     </div>
                     <div>
-                        <div><img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb7be30f1df3054aa2_635823f4ce492958261f9755_production-meal-image-29e2b6e1-12af-405d-8b33-91e19b2a0fef.jpeg" alt=""></div>
+                        <div><img
+                                src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb7be30f1df3054aa2_635823f4ce492958261f9755_production-meal-image-29e2b6e1-12af-405d-8b33-91e19b2a0fef.jpeg"
+                                alt=""></div>
                         <h2>Tricolor Beef Lasagna</h2>
                         <p>640 Cal | Gluten Free | Single-Serve/p>
                     </div>
 
                     <div>
-                        <div><img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb684a20a3c8466513_635823f4ce492969991f9772_production-meal-image-25f9ce2d-ca21-499e-a140-8d59b4733ec2.jpeg" alt=""></div>
+                        <div><img
+                                src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb684a20a3c8466513_635823f4ce492969991f9772_production-meal-image-25f9ce2d-ca21-499e-a140-8d59b4733ec2.jpeg"
+                                alt=""></div>
                         <h2>Flame-Seared Top Blade Steak</h2>
                         <p>610 Cal | Gluten Free | Single-Serve</p>
                     </div>
-                    
+
                 </div>
 
-                <div  id="OTM-Third_Child">
+                <div id="OTM-Third_Child">
                     <div>
                         <a href="">View Plans & Menu</a>
 
@@ -168,7 +183,395 @@
 
     </div>
 
+
+
+    <!-- responsive Carousel  -->
+    <div id="our-fan-favorites">
+        <h1>Our fan favorites</h1>
+        <p>Nutritious meets delicious with our rotation menu of single-serve, ready-in-minute meals TAke a look at
+            what's new.</p>
+    </div>
+    <div class="main-carousel">
+        <div class="cell">
+            <div>
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb765dff2da0c2e1fb_635823f4ce4929328b1f96f9_production-meal-image-9e969581-d09c-4617-9b17-d455d23c8952.jpeg"
+                        alt=""></div>
+                <h2>BBQ Bison Burger*</h2>
+                <p>610 Cal | Gluten Free | Single-Serve</p>
+            </div>
+        </div>
+        <div class="cell">
+            <div>
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb8cd4f9d87ba86916_635823f4ce492977d91f974a_production-meal-image-f0de55be-d691-4ade-bc26-b4a8aedaa1fe.jpeg"
+                        alt=""></div>
+                <h2>Sausage Baked Penne</h2>
+                <p>470 Cal | Gluten Free | Single-Serve</p>
+            </div>
+        </div>
+        <div class="cell">
+            <div>
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb5ae22f4680ff53d8_635823f4ce492947161f9738_production-meal-image-e4122aa8-0fe7-4854-b6f5-e27e0c5be918.jpeg"
+                        alt=""></div>
+                <h2>Homestyle Chicken</h2>
+                <p>560 Cal | Gluten Free | Single-Serve</p>
+            </div>
+        </div>
+        <div class="cell">
+            <div>
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb8b1f5aa9b139be56_635823f4ce492904901f973e_production-meal-image-c9eef45a-97a9-487c-9550-71488e5f639a.jpeg"
+                        alt=""></div>
+                <h2>Cauliflower Whell Beef Bolognese</h2>
+                <p>490 Cal | Gluten Free | Single-Serve</p>
+            </div>
+        </div>
+        <div class="cell">
+            <div>
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb7be30f1df3054aa2_635823f4ce492958261f9755_production-meal-image-29e2b6e1-12af-405d-8b33-91e19b2a0fef.jpeg"
+                        alt=""></div>
+                <h2>Tricolor Beef Lasagna</h2>
+                <p>640 Cal | Gluten Free | Single-Serve/p>
+            </div>
+        </div>
+        <div class="cell">
+
+            <div>
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb684a20a3c8466513_635823f4ce492969991f9772_production-meal-image-25f9ce2d-ca21-499e-a140-8d59b4733ec2.jpeg"
+                        alt=""></div>
+                <h2>Flame-Seared Top Blade Steak</h2>
+                <p>610 Cal | Gluten Free | Single-Serve</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- View plans & Menu section  -->
+    <div id="viewPlansAndMenu">
+        <a href="">
+            View Plans & Menu
+        </a>
+    </div>
+
+
+    <!----------- Flexible plans that fit your life --------- -->
+
+    <div id="Flesible-Plans_That_Fit_Your_Life">
+        <div id="FPTFYL-FirstChild">
+            <div>
+                <h1>Flexible plans that fit your life</h1>
+                <p>We offer anywhere from 4–12 meals per week, with meals as low as $9.58 each. The bigger your box, the
+                    more you’ll save—and you can always pause or change your plan at any time.</p>
+            </div>
+        </div>
+        <div id="FPTFYL-SecondChild">
+            <div>
+                <div>
+                    <div><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492937b0377ca6310cb0_4-5%20Meals-p-500.png"
+                            alt=""></div>
+                    <h2>4-5 Meals</h2>
+                </div>
+
+
+                <div>
+                    <div><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492393696224964e1910_6-7%20Meals-p-500.png"
+                            alt=""></div>
+                    <h2>6-7 Meals</h2>
+                    <span>Save up to $12</span>
+                </div>
+
+
+                <div>
+                    <div><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492cddaec74cb5161350_8-9%20Meals-p-500.png"
+                            alt=""></div>
+                    <h2>8-9 Meals</h2>
+                    <span>Save up to $20</span>
+                </div>
+
+
+                <div>
+                    <div><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492794414230d9d0e1be_10-11%20Meals-p-500.png"
+                            alt=""></div>
+                    <h2>10-11 Meals</h2>
+                    <span>Save up to $29</span>
+                </div>
+
+
+                <div>
+                    <div><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb4927a7912ad1a7770be8_12%20Meals-p-500.png"
+                            alt=""></div>
+                    <h2>12 Meals</h2>
+                    <span>Save up to $35</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="FPTFYL-ThirdChild">
+            <div>
+                <p>Shipping and tax added at checkout. Prices are rounded for your convenience.</p>
+
+                <div class="mayBeHide">
+                    <a href="#">Sign Up Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- What Others Are Saying -->
+
+    <section class="product">
+        <h2 id="product-category">What Others Are Saying</h2>
+        <button class="pre-btn">
+            <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button class="nxt-btn">
+
+            <i class="fa-solid fa-angle-right"></i>
+        </button>
+        <div class="product-container">
+            <div class="product-card">
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d96607e740addd99bf570ae_star.svg"
+                        alt=""></div>
+                <h2>Amazingly delicious and convenient!</h2>
+                <p>I love that I have found freshly and that it allows me to try new things and allows me to eat healthy
+                    while remaining affordable!
+
+                </p>
+                <h3>Jessica Wilson
+                </h3>
+            </div>
+            <div class="product-card">
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d96607e740addd99bf570ae_star.svg"
+                        alt=""></div>
+                <h2>Convenience, taste, variety
+                </h2>
+                <p>Been a customer for more than a year now, and love it. Customer service is particularly outstanding —
+                    whenever there’s been a problem, Freshly staff respond quickly and always rectify the problem.</p>
+                <h3>Jeffrey</h3>
+            </div>
+            <div class="product-card">
+
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d96607e740addd99bf570ae_star.svg"
+                        alt=""></div>
+                <h2>Delicious! So yummy!
+                </h2>
+                <p>The convenience of a well prepared, healthy, flavorful meal with no shopping, preparing, or clean up
+                    is simply amazing. Looking forward to the rest of the week.
+
+                </p>
+                <h3>Kristie Geiges
+                </h3>
+            </div>
+            <div class="product-card">
+
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d96607e740addd99bf570ae_star.svg"
+                        alt=""></div>
+                <h2>Freshly has changed our lives!
+                </h2>
+                <p>With Freshly, we don’t have to go anywhere or wait for delivery, and our monthly food bill has
+                    been cut nearly in half. We love it.
+
+                </p>
+                <h3>Dave</h3>
+            </div>
+
+
+            <div class="product-card">
+
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d96607e740addd99bf570ae_star.svg"
+                        alt=""></div>
+                <h2>10 stars! Awesome! Love it!
+
+                </h2>
+                <p>We love Freshly because it takes two minutes to prepare, the food is great and we don’t have to spend
+                    time cleaning up.
+                </p>
+                <h3>Sheri</h3>
+            </div>
+
+            <div class="product-card">
+
+                <div><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d96607e740addd99bf570ae_star.svg"
+                        alt=""></div>
+                <h2>One of the easiest decisions I've made
+
+                </h2>
+                <p>With Freshly, I don’t have to think about what I’m going to eat for lunch each day and feel good
+                    knowing that I’m eating a healthy meal. I love the convenience!
+                </p>
+
+                <h3>Cindi</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- We believe eating right should be easy for everyone. -->
+    <div id="We-believe-eating-right-should-be-easy-for-everyone">
+        <div>
+            <div id="WBERSBEFE-blackDiv"></div>
+            <div id="WBERSBEFE-BackgroundDiv">
+            </div>
+        </div>
+        <div id="WBERSBEFE-ContentDiv">
+            <h1>We believe eating right should be easy for everyone.</h1>
+            <p>Each Freshly meal is perfectly sized for 1 person to enjoy at 1 sitting. Our fully-prepared meals are
+                delivered fresh, and ready to eat in 3 minutes.</p>
+            <div>
+                <a href="https://www.freshly.com/why-freshly">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Healthy Meals Delivered Weekly -->
+    <div id="Healthy-meals-delivered-weekly">
+        <div>
+            <div id="HMDW-BackgroundDiv">
+            </div>
+            <div id="HMDW-blackDiv"></div>
+        </div>
+        <div id="HMDW-ContentDiv">
+            <div>
+                <h1>Healthy Meals Delivered Weekly.</h1>
+                <div>
+                    <input type="text" id="EmailAddress" placeholder="foodium@foodium.com">
+                    <input type="text" id="ZipCode" placeholder="Zip">
+                </div>
+                <div>
+                    <a href="#">Get Started</a>
+                </div>
+                <p>Already have an account? <a href="./loginAndSignup.html">Log in</a></p>
+                <p>By continuing, you agree to our <a href="https://www.freshly.com/terms">Terms</a> and <a
+                        href="https://about.freshly.com/privacy">Privacy Policy</a>.& will receive emails from Freshly.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Investors area  -->
+    <div id="InvestorsArea">
+
+        <div>
+            <div>
+                <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f523e435aee2e3a4ab03e6f_The_Huffington_Post_logo.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f523e412d98cd166a6c84e6_logo-header.64f3bdc15b1f321829f9f30c7853a1469f469d71.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f523e436b26e00a240533b1_Entrepreneur-01.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f523e432759db28ffaf924f_w-g-logo-black.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f523f552759db186baf93d2_techcrunch-seeklogo.com%20%5BConverted%5D.svg"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f523e434bbecc1909457f48_logo-header.aeb2e510354d524c42a87c5d0a97d0a73c5d7581.svg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section  -->
+
+    <div id="FooterSection">
+        <div>
+            <div id="FS-ChildOne">
+                <a href="">
+                    <div><img src="https://i.ibb.co/sqp9KQk/foodium-logo.png" alt=""></div>
+                    <span>foodium</span>
+                </a>
+                <a href="#">@Foodium Inc.</a>
+            </div>
+            <div id="FS-ChildTwo">
+                <span>Company</span>
+                <a href="https://freshly.wd5.myworkdayjobs.com/freshly_careers">Careers</a>
+                <a href="https://www.freshly.com/contact">Contact Us</a>
+                <a href="https://www.freshly.com/press">Press</a>
+                <a href="https://www.freshly.com/terms">Terms</a>
+                <a href="https://www.freshly.com/privacy">Privacy</a>
+                <a href="https://www.freshly.com/affiliates">Affiliates</a>
+                <a href="https://www.freshly.com/partnerships">Partnerships</a>
+            </div>
+            <div id="FS-ChildThree">
+                <span>Learn More</span>
+                <a href="https://www.freshly.com/plans-and-menu">Plans & Menu</a>
+                <a href="https://www.freshly.com/why-freshly">Why Freshly?</a>
+                <a href="https://www.freshly.com/gifts">Girts</a>
+                <a href="https://support.freshly.com/hc/en-us">FAQs</a>
+                <a href="https://support.freshly.com/hc/en-us">Blog</a>
+                <a href="https://www.freshly.com/students">Students</a>
+            </div>
+            <div id="FS-ChildFour">
+                <span>Join Us</span>
+                <div>
+                    <a href="https://www.facebook.com/freshly"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bbc67c09879c5a19b_5d795c37fedbb6017d824b02_icons8-facebook-old-30.jpg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/freshly/"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423ad92101de48f410c7_5d10dfc0ef515f74b875a42c_icons8-instagram-50.jpg"
+                            alt=""></a>
+                    <a href="https://twitter.com/freshly"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bd050163202b341e8_5d10dfc00442bfc99d3d6828_icons8-twitter-filled-50.jpg"
+                            alt=""></a>
+                    <a href="https://www.pinterest.com/FreshlyHQ/"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423a6b26e039d505425e_5d10dfbfef515faad975a42b_icons8-pinterest-filled-50.jpg"
+                            alt=""></a>
+                </div>
+
+
+
+                <a href="https://itunes.apple.com/app/apple-store/id1195648107?pt=118497527&ct=WebsiteFooter&mt=8">
+                    <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d6439d4fb92e7630e46976b_Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                        alt="">
+                </a>
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.freshly.meal&utm_source=website&utm_campaign=footer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d643dd558306bfe1df5ef8b_google-play-badge-p-1080.png"
+                        alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
 <script type="module" src="homePage.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+    $('.main-carousel').flickity({
+        // options
+        cellAlign: 'left',
+        wrapAround: true,
+        contain: true,
+        freeScoll: true,
+    });
+</script>
