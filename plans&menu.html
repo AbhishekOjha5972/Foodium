@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plans & Menu</title>
+    <link rel="stylesheet" href="./Components/navbar.css">
+    
     <link rel="stylesheet" href="plans&menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +16,14 @@
 </head>
 
 <body>
+
+    <div id="mainNavbarContainer" style="position:sticky ; z-index: 20001;"></div>
+
+    <div class="navbarModal" style="position:sticky ; z-index: 20004;"></div>
+
+
+
+
     <div id="flexible_plan">
         <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6192ce7669f68694a8b969af_Group%20(8).svg"
             alt="">
@@ -22,42 +32,88 @@
                 you’ll save—</b> and you can always pause or change your plan at any time.</p>
     </div>
 
+
+
     <div id="meals">
-        <div>
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492937b0377ca6310cb0_4-5%20Meals-p-500.png"
+
+        <div class="mealsdiv" style="position:sticky; z-index: 2000;">
+            <img class="mealimg"
+                src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492937b0377ca6310cb0_4-5%20Meals-p-500.png"
                 alt="">
-            <p>4-5 Meals</p>
+            <a href="">
+                <p id="mealnumber1">4-5 Meals</p>
+            </a>
+
+
         </div>
-        <div>
+
+
+
+        <div class="mealsdiv" style="position:sticky; z-index: 2000;">
             <div>Save Up to $12</div>
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492393696224964e1910_6-7%20Meals-p-500.png"
+            <img class="mealimg"
+                src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492393696224964e1910_6-7%20Meals-p-500.png"
                 alt="">
-            <p>6-7 Meals</p>
+
+            <a href="./cart.html">
+                <p id="mealnumber2"> 6-7 Meals</p>
+            </a>
+
+
         </div>
-        <div>
+
+
+
+        <div class="mealsdiv" style="position:sticky; z-index: 2000;">
             <div>Save Up to $20</div>
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492cddaec74cb5161350_8-9%20Meals-p-500.png"
+            <img class="mealimg"
+                src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492cddaec74cb5161350_8-9%20Meals-p-500.png"
                 alt="">
-            <p>8-9 Meals</p>
+            <a href="./cart.html"> <p id="mealnumber3">8-9 Meals</p></a>
+           
+
+
         </div>
-        <div>
+
+
+
+
+        <div class="mealsdiv" style="position:sticky; z-index: 2000;">
             <div>Save Up to $29</div>
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492794414230d9d0e1be_10-11%20Meals-p-500.png"
+            <img class="mealimg"
+                src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492794414230d9d0e1be_10-11%20Meals-p-500.png"
                 alt="">
-            <p>10-11 Meals</p>
+
+            <a href="./cart.html">
+                <p id="mealnumber4">10-11 Meals</p>
+            </a>
+
+
         </div>
-        <div>
+
+
+
+        <div class="mealsdiv" style="position:sticky; z-index: 2000;">
             <div>Save Up to $35</div>
-            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb4927a7912ad1a7770be8_12%20Meals-p-500.png"
+            <img class="mealimg"
+                src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb4927a7912ad1a7770be8_12%20Meals-p-500.png"
                 alt="">
-            <p>12 Meals</p>
+
+            <a href="./cart.html">
+                <p id="mealnumber5">12 Meals</p>
+            </a>
+
+
         </div>
+
+
 
     </div>
 
-    <div id="shipingtax">
+
+    <div id="shipingtax" style="z-index:10001;position: sticky;">
         <p>Shipping and tax added at checkout. Prices are rounded for your convenience.</p>
-        <button>Get Started</button>
+        <a href="./cart.html"><button>Get Started</button></a>
     </div>
 
     <div id="onthemenu">
@@ -70,12 +126,12 @@
 
     <div id="selectfoodcatagory">
         <label for="">Menu category:</label>
-        <select name="" id="">
-            <option value="volvo">All Meals</option>
-            <option value="saab">Purely Plants</option>
-            <option value="mercedes">Signature Collection</option>
-            <option value="audi">Freshly Fit</option>
-            <option value="audi">Protins and Sides</option>
+        <select name="" id="filter_to_menu">
+            <option value="All Meals">All Meals</option>
+            <option value="Purely Plants">Purely Plants</option>
+            <option value="Signature Collection">Signature Collection</option>
+            <option value="Freshly Fit">Freshly Fit</option>
+            <option value="Protins and Sides">Protins and Sides</option>
         </select>
 
     </div>
@@ -126,29 +182,21 @@
     <div id="common_question_append_div"></div>
 
 
-    <div class="menu_pop_up">
-
-        <div class="menu_popup_append_div">
+    <div class="menu_pop_up" style="opacity:1">
+        <div class="menu_popup_append_div" style="opacity:1;">
             <img id="imagecross"
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAZlBMVEX///8AAADExMTq6uq1tbXb29u4uLjy8vIXFxe9vb2bm5vAwMDm5ubW1tafn58aGhqsrKxFRUUyMjLOzs4rKys9PT0SEhIjIyMKCgqGhoZtbW34+PhZWVlnZ2dNTU2mpqaSkpJ6enpbECUFAAAEQ0lEQVR4nLWb63aqMBSEk1rFXlGr1FptT9//JU8jpELIZfYl8xeWzJr5DIQEY0Z6OLV2+7owNfW5fE4eW5ztVe1dveu/XPZdu/9o4ga21quahc1wgf0ycrA5WFvbwubvAuu5haa1Y93XMPA4vsJLcHBxsFM9VDZg7TSFEQPVivgOLrAep9CECTg96RrYzC4wshAwUIWF19gV3oaDMwYqpPAYv0KfQoQBLzUW5hX0Ol5TOCcNqKUQQjhNYZUxoMRClIFBbWMuWQcaKSQYGLQx67wDOQspBgadTcGAeHTMMHBVZ76KFkQs5Bi4qi16tCIW8gw4ncwiPiBOxGahwIDTypi78llcFoB8t+48xAKLhSID1u76h1LEAoOFMgN2759a7wELZBYABuztsfwBOHtFMwAw8D6eFyBFkCwAFeymE4cnwAKhCADCfThzUWWBxgAlBbAIKgNeaizQGaCkABTBYcBLhQUeA5QUCkUgCeTeD4hZ4DPghYyOmSKABN7zBoQsyBjwErAAjANZBrzYLMgZ8GKyACTQYgaYLOgw4IWwEDy4SceBUGQW9Bjwyk9oe42KABhYU9+UkizoMuBFeIjXZoBi4TqV0WfACywCYKDjvi2HLAAMHPmv65EiymIxoGmByYAXUkReggp0LLAhvElWhIgBDQtCBrz4RYgZkFog34zS4hWx01w35FhQYsALeXCbSo0BLyoLrf7SLa0IVQY4FpLTc5kILNRaPUemMk7RVzQ6wopQ/htOhaRQMYFffSAOwkVtTf1ALRzfyr/E1Aky8Guh1hYKLIGr6qSAMFC1CEICdVIgGtBngWpAPQUKA1UssAxo7mX54RnQY4GZgJNOEf/4BnQsCBJwkhfxIzMgZ0GYgJOsCBEDGhaQBLryKfwiAAPdEnl25FpAKijuaOrFKwIxcN1kiMwjOBYQBoZdjnW2UCAM/D0U12ABrqCXPgvAy+rpRlNtFoAKjsF+X91NRUAF3WzDsSYL5Ap66bEArJjEDOhtJGFV0EuHBcBACCHNQikFJgNexEXCiNgMaFkAKojs+59IxgLCQPEFiYQFcQW9+EUA64aIAb4F4F9QYsCLt+sTMFBmgGIhTEGtgl70AVrZAMbC+E8JVJC6F6REY0GVAS/KTj9kBwUxASecBcQA61Uxuq/prXwalQEvgAW3HFX4iMNyGPACWPg2zXvxJGYCTmUWvsyyOPsWGEBYMM+F7xfQe0FKJRbWxuzyZ4gXTAosXEqPJcIEnPIsrIxpciEoGMincHYnLJOfNHHHgVBpFrb9utwydVxt0SyVwsEvDL7Ejysl4BRnob19dRwrIj0z4iiWwmH82fPcghYDXnMWttO12RkL6gun4eh4CBeHAxaUE3CastDOvzxfjoZnXQa8xkUcYp++3+5R/NsxamEbX59/3veH6+0fuBtyPqc2CHxuzsfusvmsZcCYxevWtqfJ3Pk/1O43zDn7dvAAAAAASUVORK5CYII="
                 alt="">
-
         </div>
 
     </div>
 
+
     <hr style="margin-top: 50px;">
 
-    <div id="footer">
-      <div class="footersubdiv">
-        <span><img src="https://i.ibb.co/sqp9KQk/foodium-logo.png" alt=""></span>
-        <span>foodium</span>
-      </div>
-      <div class="footersubdiv"></div>
-      <div class="footersubdiv"></div>
-    </div>
 
-    <div id="asd"></div>
+
+
 
 </body>
 
@@ -158,6 +206,5 @@
 
 
 
-
+<script src="./homePage.js" type="module"></script>
 <script src="plans&menu.js" type="module"></script>
-

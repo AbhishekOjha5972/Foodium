@@ -58,6 +58,7 @@ function reportWindowSize() {
 let signupEvent=document.getElementById('sign_Up');
 signupEvent.addEventListener('click',()=>{
     window.location.href="loginAndSignup.html"
+    //console.log("Invoked")
 })
 
 let loginEvent=document.getElementById('log_In');
