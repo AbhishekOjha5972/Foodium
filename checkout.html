@@ -31,9 +31,14 @@
       <div class="nav-help">
         <i class="fa-regular fa-circle-question"></i>
         <h3>Customer Support</h3>
-        <button class="nav-dropdown">
-          <i class="fa-solid fa-caret-down"></i>
-        </button>
+        <div class="dropdown">
+          <button id="nav-dropdown" class="dropbtn">
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Live Chat</a><a href="#">Dial Us</a>
+          </div>
+        </div>
       </div>
       <!-- <label for="nav-toggle" class="nav-icon-burger">
         <div class="line"></div>
@@ -41,212 +46,161 @@
         <div class="line"></div>
       </label> -->
     </nav>
-
-    <!--form-->
-    <div class="container">
-      <header>Registration</header>
-
-      <form action="#">
-        <div class="form first">
-          <div class="details personal">
-            <span class="title">Personal Details</span>
-
-            <div class="fields">
-              <div class="input-field">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter your name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Date of Birth</label>
-                <input type="date" placeholder="Enter birth date" required />
-              </div>
-
-              <div class="input-field">
-                <label>Email</label>
-                <input type="text" placeholder="Enter your email" required />
-              </div>
-
-              <div class="input-field">
-                <label>Mobile Number</label>
-                <input
-                  type="number"
-                  placeholder="Enter mobile number"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Gender</label>
-                <select required>
-                  <option disabled selected>Select gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Others</option>
-                </select>
-              </div>
-
-              <div class="input-field">
-                <label>Occupation</label>
+    <div class="row">
+      <div class="col-75">
+        <div class="container">
+          <form id="checkout-form">
+            <div class="row">
+              <div class="col-50">
+                <h3 class="hel">Personal Address</h3>
+                <label for="fname" class="hel"
+                  ><i class="fa fa-user"></i> Full Name</label
+                >
                 <input
                   type="text"
-                  placeholder="Enter your ccupation"
-                  required
+                  id="fname"
+                  name="firstname"
+                  placeholder="Your full name"
                 />
-              </div>
-            </div>
-          </div>
-
-          <div class="details ID">
-            <span class="title">Identity Details</span>
-
-            <div class="fields">
-              <div class="input-field">
-                <label>ID Type</label>
-                <input type="text" placeholder="Enter ID type" required />
-              </div>
-
-              <div class="input-field">
-                <label>ID Number</label>
-                <input type="number" placeholder="Enter ID number" required />
-              </div>
-
-              <div class="input-field">
-                <label>Issued Authority</label>
+                <label for="address" class="hel"
+                  ><i class="fa fa-address-card-o"></i> Address Line 1</label
+                >
                 <input
                   type="text"
-                  placeholder="Enter issued authority"
-                  required
+                  id="address"
+                  name="address"
+                  placeholder="enter your address"
                 />
-              </div>
-
-              <div class="input-field">
-                <label>Issued State</label>
-                <input type="text" placeholder="Enter issued state" required />
-              </div>
-
-              <div class="input-field">
-                <label>Issued Date</label>
+                <label for="adr" class="hel"
+                  ><i class="fa fa-address-card-o"></i> Address Line 2</label
+                >
                 <input
-                  type="date"
-                  placeholder="Enter your issued date"
-                  required
+                  type="text"
+                  id="adr"
+                  name="address"
+                  placeholder="enter your address"
                 />
+                <label for="city" class="hel"
+                  ><i class="fa fa-institution"></i> City</label
+                >
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Enter your city"
+                />
+
+                <div class="row">
+                  <div class="col-50">
+                    <label for="state" class="hel">State</label>
+                    <input
+                      type="text"
+                      id="state"
+                      name="state"
+                      placeholder="Enter your state"
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label for="zip" class="hel">Zip</label>
+                    <input
+                      type="text"
+                      id="zip"
+                      name="zip"
+                      placeholder="440404"
+                    />
+                  </div>
+                </div>
               </div>
 
-              <div class="input-field">
-                <label>Expiry Date</label>
-                <input type="date" placeholder="Enter expiry date" required />
+              <div class="col-50">
+                <h3 class="hel">Payment</h3>
+                <label for="fname" class="hel">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color: navy"></i>
+                  <i class="fa fa-cc-amex" style="color: blue"></i>
+                  <i class="fa fa-cc-mastercard" style="color: red"></i>
+                  <i class="fa fa-cc-discover" style="color: orange"></i>
+                </div>
+                <label for="cname" class="hel">Name on Card</label>
+                <input
+                  type="text"
+                  id="cname"
+                  name="cardname"
+                  placeholder="Your name as on card"
+                />
+                <label for="ccnum" class="hel">Credit card number</label>
+                <input
+                  type="text"
+                  id="ccnum"
+                  name="cardnumber"
+                  placeholder="1111-2222-3333-4444"
+                />
+                <label for="expmonth" class="hel">Exp Month</label>
+                <input
+                  type="text"
+                  id="expmonth"
+                  name="expmonth"
+                  placeholder="Month of expiry"
+                />
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear" class="hel">Exp Year</label>
+                    <input
+                      type="text"
+                      id="expyear"
+                      name="expyear"
+                      placeholder="Year of expiry"
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv" class="hel">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="999" />
+                  </div>
+                </div>
               </div>
             </div>
 
-            <button class="nextBtn">
-              <span class="btnText">Next</span>
-              <i class="uil uil-navigator"></i>
-            </button>
-          </div>
+            <!-- <label>
+              <input type="checkbox" checked="checked" name="sameadr" />
+              Shipping address same as billing
+            </label> -->
+            <input type="submit" value="Pay now" class="btn" />
+          </form>
         </div>
-
-        <div class="form second">
-          <div class="details address">
-            <span class="title">Address Details</span>
-
-            <div class="fields">
-              <div class="input-field">
-                <label>Address Type</label>
-                <input
-                  type="text"
-                  placeholder="Permanent or Temporary"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Nationality</label>
-                <input type="text" placeholder="Enter nationality" required />
-              </div>
-
-              <div class="input-field">
-                <label>State</label>
-                <input type="text" placeholder="Enter your state" required />
-              </div>
-
-              <div class="input-field">
-                <label>District</label>
-                <input type="text" placeholder="Enter your district" required />
-              </div>
-
-              <div class="input-field">
-                <label>Block Number</label>
-                <input
-                  type="number"
-                  placeholder="Enter block number"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Ward Number</label>
-                <input type="number" placeholder="Enter ward number" required />
-              </div>
-            </div>
+      </div>
+      <!--Cart div-->
+      <div class="col-25">
+        <div class="container">
+          <h4 class="hel">Order Summary</h4>
+          <div id="gift-card-div">
+            <button id="promo-code-btn">+ Add Promo Code</button>
+            <button id="gift-card-btn">+ Redeem Gift Card</button>
           </div>
 
-          <div class="details family">
-            <span class="title">Family Details</span>
-
-            <div class="fields">
-              <div class="input-field">
-                <label>Father Name</label>
-                <input type="text" placeholder="Enter father name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Mother Name</label>
-                <input type="text" placeholder="Enter mother name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Grandfather</label>
-                <input
-                  type="text"
-                  placeholder="Enter grandfther name"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Spouse Name</label>
-                <input type="text" placeholder="Enter spouse name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Father in Law</label>
-                <input type="text" placeholder="Father in law name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Mother in Law</label>
-                <input type="text" placeholder="Mother in law name" required />
-              </div>
-            </div>
-
-            <div class="buttons">
-              <div class="backBtn">
-                <i class="uil uil-navigator"></i>
-                <span class="btnText">Back</span>
-              </div>
-
-              <button class="sumbit">
-                <span class="btnText">Submit</span>
-                <i class="uil uil-navigator"></i>
-              </button>
-            </div>
-          </div>
+          <h4 class="hel">
+            Cart
+            <span class="price" style="color: black"
+              ><i class="fa fa-shopping-cart"></i> <b>4</b></span
+            >
+          </h4>
+          <p class="hel">
+            <a href="#">Product 1</a> <span class="price">$15</span>
+          </p>
+          <p class="hel">
+            <a href="#">Product 2</a> <span class="price">$5</span>
+          </p>
+          <p class="hel">
+            <a href="#">Product 3</a> <span class="price">$8</span>
+          </p>
+          <p class="hel">
+            <a href="#">Product 4</a> <span class="price">$2</span>
+          </p>
+          <hr />
+          <p class="hel">
+            Total <span class="price" style="color: black"><b>$30</b></span>
+          </p>
         </div>
-      </form>
-
-      <!--EO:Form-->
+      </div>
     </div>
   </body>
 </html>
