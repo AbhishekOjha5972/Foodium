@@ -223,7 +223,7 @@ label {
 }
 
 .btn {
-  background-color: #04aa6d;
+  background-color: #3498db;
   color: white;
   padding: 12px;
   margin: 10px 0;
@@ -235,7 +235,7 @@ label {
 }
 
 .btn:hover {
-  background-color: #45a049;
+  background-color: #3498db;
 }
 
 a {
@@ -259,17 +259,24 @@ span.price {
   color: #2980b9;
   background-color: transparent;
   text-decoration: underline;
-  border: none;
+  font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: left;
+  border: none;
+}
+.disnone {
+  display: none;
 }
 #gift-card-div #gift-card-btn {
   border: none;
   color: #2980b9;
   text-decoration: underline;
+  font-weight: bold;
   background-color: transparent;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: left;
 }
 /*EO form w3*/
 /*media queries for navbar*/

@@ -50,3 +50,41 @@ form.onsubmit = (e) => {
     cvv_div
   );
 };
+
+//onclick of promocode btn,
+let pcbtn = document.getElementById(`promo-code-btn`);
+pcbtn.onclick = () => {
+  appendCode(pcbtn);
+};
+let gcbtn = document.getElementById(`gift-card-btn`);
+gcbtn.onclick = () => {
+  appendCode(gcbtn);
+};
+const appendCode = (ele) => {
+  let gc_div = document.getElementById(`gift-card-div`);
+  if (ele.id == `promo-code-btn`) {
+    let temp_div = document.createElement(`div`);
+    let ipbox = document.createElement(`input`);
+    ipbox.placeholder = `Add Promo Code here`;
+    let cclbtn = document.createElement(`button`);
+    cclbtn.innerText = `cancel`;
+    cclbtn.setAttribute(`id`, `promo-code-btn`);
+    cclbtn.onclick = () => {
+      temp_div.innerHTML = null;
+    };
+    temp_div.append(ipbox, cclbtn);
+    gc_div.append(temp_div);
+  } else if (ele.id == `gift-card-btn`) {
+    let temp_div = document.createElement(`div`);
+    let ipbox = document.createElement(`input`);
+    ipbox.placeholder = `Redeem Gift Card here`;
+    let cclbtn = document.createElement(`button`);
+    cclbtn.innerText = `cancel`;
+    cclbtn.setAttribute(`id`, `promo-code-btn`);
+    cclbtn.onclick = () => {
+      temp_div.innerHTML = null;
+    };
+    temp_div.append(ipbox, cclbtn);
+    gc_div.append(temp_div);
+  }
+};
