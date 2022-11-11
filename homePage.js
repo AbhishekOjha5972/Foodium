@@ -87,3 +87,27 @@ else{
     userDataAppend.textContent=lsUserData.first_name;
 }
 
+
+
+
+// Carousel section 
+
+
+const productContainers = [...document.querySelectorAll('.product-container')];
+console.log('productContainers:', productContainers)
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+console.log('nxtBtn:', nxtBtn)
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
