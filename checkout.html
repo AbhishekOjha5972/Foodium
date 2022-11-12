@@ -10,42 +10,37 @@
       src="https://kit.fontawesome.com/5697e54765.js"
       crossorigin="anonymous"
     ></script>
-    <!--where to store favicon image-->
   </head>
   <body>
+    <!--everything of navbar inside this div-->
     <nav>
-      <!-- <input id="nav-toggle" type="checkbox" /> -->
       <div class="nav-logo">
         <img id="nav-logo-img" alt="logo" />
-        <!--heading 'checkout' will overlay on this heading in mobile view-->
-        <h3>Foodium</h3>
-        <!-- <a id="nav-logo-a" href="#"></a> -->
+        <h3 id="project-name">Foodium</h3>
       </div>
+      <!--central navbar links-->
       <ul class="nav-links">
         <li><a href="#home">Meals</a></li>
         <li><span>></span></li>
         <li><a href="#about">Checkout</a></li>
-        <li><span>></span></li>
-        <li><a href="#work">Payment</a></li>
       </ul>
+      <!--help div on top right-->
       <div class="nav-help">
         <i class="fa-regular fa-circle-question"></i>
         <h3>Customer Support</h3>
-        <div class="dropdown">
+        <!--dropdown div-->
+        <div class="dropdown" id="dropdown-div">
           <button id="nav-dropdown" class="dropbtn">
             <i class="fa-solid fa-caret-down"></i>
           </button>
           <div id="myDropdown" class="dropdown-content">
-            <a href="#">Live Chat</a><a href="#">Dial Us</a>
+            <a href="homePage.html">Live Chat</a
+            ><a href="homePage.html">Dial Us</a>
           </div>
         </div>
       </div>
-      <!-- <label for="nav-toggle" class="nav-icon-burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </label> -->
     </nav>
+    <!--form including cart-->
     <div class="row">
       <div class="col-75">
         <div class="container">
@@ -61,6 +56,7 @@
                   id="fname"
                   name="firstname"
                   placeholder="Your full name"
+                  required
                 />
                 <label for="address" class="hel"
                   ><i class="fa fa-address-card-o"></i> Address Line 1</label
@@ -70,6 +66,7 @@
                   id="address"
                   name="address"
                   placeholder="enter your address"
+                  required
                 />
                 <label for="adr" class="hel"
                   ><i class="fa fa-address-card-o"></i> Address Line 2</label
@@ -79,6 +76,7 @@
                   id="adr"
                   name="address"
                   placeholder="enter your address"
+                  required
                 />
                 <label for="city" class="hel"
                   ><i class="fa fa-institution"></i> City</label
@@ -88,6 +86,7 @@
                   id="city"
                   name="city"
                   placeholder="Enter your city"
+                  required
                 />
 
                 <div class="row">
@@ -98,6 +97,7 @@
                       id="state"
                       name="state"
                       placeholder="Enter your state"
+                      required
                     />
                   </div>
                   <div class="col-50">
@@ -107,6 +107,7 @@
                       id="zip"
                       name="zip"
                       placeholder="440404"
+                      required
                     />
                   </div>
                 </div>
@@ -127,6 +128,7 @@
                   id="cname"
                   name="cardname"
                   placeholder="Your name as on card"
+                  required
                 />
                 <label for="ccnum" class="hel">Credit card number</label>
                 <input
@@ -134,6 +136,7 @@
                   id="ccnum"
                   name="cardnumber"
                   placeholder="1111-2222-3333-4444"
+                  required
                 />
                 <label for="expmonth" class="hel">Exp Month</label>
                 <input
@@ -141,6 +144,7 @@
                   id="expmonth"
                   name="expmonth"
                   placeholder="Month of expiry"
+                  required
                 />
                 <div class="row">
                   <div class="col-50">
@@ -150,11 +154,18 @@
                       id="expyear"
                       name="expyear"
                       placeholder="Year of expiry"
+                      required
                     />
                   </div>
                   <div class="col-50">
                     <label for="cvv" class="hel">CVV</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="999" />
+                    <input
+                      type="text"
+                      id="cvv"
+                      name="cvv"
+                      placeholder="999"
+                      required
+                    />
                   </div>
                 </div>
               </div>
@@ -179,26 +190,18 @@
 
           <h4 class="hel">
             Cart
-            <span class="price" style="color: black"
-              ><i class="fa fa-shopping-cart"></i> <b>4</b></span
+            <span id="cart-count" class="price" style="color: black"
+              ><i class="fa fa-shopping-cart"></i>3</span
             >
           </h4>
-          <p class="hel">
-            <a href="#">Product 1</a> <span class="price">$15</span>
-          </p>
-          <p class="hel">
-            <a href="#">Product 2</a> <span class="price">$5</span>
-          </p>
-          <p class="hel">
-            <a href="#">Product 3</a> <span class="price">$8</span>
-          </p>
-          <p class="hel">
-            <a href="#">Product 4</a> <span class="price">$2</span>
-          </p>
           <hr />
-          <p class="hel">
-            Total <span class="price" style="color: black"><b>$30</b></span>
-          </p>
+          <h4 class="hel">
+            Total
+            <span id="cart-amount" class="price" style="color: black"
+              ><i class="fa fa-shopping-cart"></i>3</span
+            >
+          </h4>
+          <div class="clicked-items"></div>
         </div>
       </div>
     </div>
