@@ -10,6 +10,7 @@
     height: 100vh;
     background-image: url("https://res.cloudinary.com/freshly/image/upload/c_crop,g_auto,dpr_auto,q_30,w_1500,h_900/v1494958610/joinnow-southchicken.jpg");
     display: flex;
+    align-items: center;
 }
 
 #authentication-Main_Container_IMG {
@@ -18,12 +19,13 @@
 }
 
 #authentication-Main_Container_FirstChild {
-    height: 60%;
+    height: 70%;
     width: 60%;
     margin: auto;
     background-color: white;
     /* opacity: 0.7; */
     padding: 30px;
+
 }
 
 
@@ -195,22 +197,22 @@
 
 @media screen and (min-width:775px) and (max-width:990px) {
     #authentication-Main_Container_FirstChild {
-        height: 55%;
+        height: 75%;
         width: 80%;
         margin: auto;
         background-color: white;
         /* opacity: 0.7; */
         padding: 30px;
         transition: .08s;
+
     }
 }
 
-@media screen and (min-width:404px) and (max-width:779px) {
+@media screen and (min-width:404px) and (max-width:774px) {
 
     #authentication-Main_Container_FirstChild {
         height: 80%;
         width: 80%;
-        padding: 30px;
         transition: .08s;
     }
 

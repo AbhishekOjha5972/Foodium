@@ -1,17 +1,265 @@
 #FooterSection {
+    position: relative;
     width: 100%;
-    height: 500px;
-    border: 3px solid red;
+    /* height: 500px; */
+    padding: 30px 0;
+    /* border: 3px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+#FooterSection a {
+    color: rgb(114, 110, 110);
+    margin-top: 15px;
+}
+
+#FooterSection span {
+    margin-top: 15px;
 }
 
 #FooterSection>div {
     width: 70%;
-    height: 90%;
-    border: 3px solid red;
+    /* border: 3px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+#FS-ChildOne {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+#FS-ChildOne>a {
     display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+#FS-ChildOne>a>div>img {
+    width: 25px;
+    height: 25px;
+    /* border: 1px solid red; */
+}
+
+#FS-ChildOne>a>span {
+    font-size: 25px;
+    color: rgb(3, 82, 78);
+    font-weight: 600;
+    margin-top: 0;
+}
+
+#FS-ChildOne>a:nth-child(1) {
+    /* color: rgb(114,110,110); */
+    margin-top: 10px;
+}
+
+#FS-ChildOne>a:nth-child(2) {
+    color: rgb(114, 110, 110);
+    margin-top: 10px;
+}
+
+
+#FS-ChildTwo {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+#FS-ChildTwo>span {
+    color: rgb(3, 82, 78);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#FS-ChildThree {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+#FS-ChildThree>span {
+    color: rgb(3, 82, 78);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#FS-ChildFour {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+#FS-ChildFour>span {
+    color: rgb(3, 82, 78);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#FS-ChildFour>div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
 }
+
+#FS-ChildFour>div>a {
+    /* border: 1px solid yellow; */
+    display: flex;
+    align-content: center;
+    justify-content: left;
+
+}
+
+#FS-ChildFour>div>a>img {
+    height: 20px;
+    width: 20px;
+}
+
+#FS-ChildFour>a {
+    /* border: 1px solid gray; */
+    display: flex;
+    height: 30px;
+    width: 100px;
+    align-items: center;
+
+}
+
+#FS-ChildFour>a>img {
+
+    width: 100%;
+}
+
+/* styling of the second footer section  */
+#For-Responsiveness-Footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    /* border: 1px solid blue; */
+    padding: 30px 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+#For-Responsiveness-Footer>div {
+    /* border: 1px solid red; */
+    width: 50%;
+}
+#For-Responsiveness-Footer a{
+     color: rgb(114, 110, 110);
+}
+#For-Responsiveness-Footer span{
+    color: rgb(114, 110, 110);
+}
+#FRF-ChildOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    line-height: 30px;
+    /* border: 1px solid red; */
+
+}
+
+#FRF-ChildThree {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px 0;
+
+}
+
+#FRF-ChildThree>div {
+    width: 100px;
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
+    justify-content: center;
+    align-items: center;
+}
+
+#FRF-ChildThree>div>a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    /* border: 1px solid red; */
+    justify-content: center;
+
+}
+
+#FRF-ChildThree>div>a>img {
+    height: 10px;
+    width: 10px;
+}
+
+#FRF-ChildFour {
+    display: flex;
+    /* border: 1px solid black; */
+    width: 100%;
+    justify-content: center;
+    gap: 0 5%;
+}
+
+#FRF-ChildFour>a {
+    width: 50%;
+    height: 30%;
+    /* height: 30px; */
+    /* border: 1px solid blue; */
+}
+
+#FRF-ChildFour>a>img {
+/* height: fit-content; */
+width: 100%;
+}
+#FRF-ChildFive{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Responsiveness  */
+
+@media screen and (min-width:775px) and (max-width:1000px) {
+    #FooterSection {
+        position: relative;
+        top: 2500px;
+    }
+
+    #FooterSection>div {
+        width: 90%;
+        transition: .6s;
+
+    }
+}
+
+@media screen and (max-width:775px) {
+    #FooterSection {
+        display: none;  
+    }
+}
+
+
+
+@media screen and (max-width:774px) {
+    #For-Responsiveness-Footer{
+        display: block; 
+        display: flex;
+    }
+    #For-Responsiveness-Footer>div {
+        width: 60%;
+        transition: .3s;
+    }
+
+}
+
 
