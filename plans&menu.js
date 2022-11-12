@@ -1,10 +1,15 @@
 
+import commonquestion from "./Components/commonquestion.js" 
+let common_question_div=document.getElementById("common_question_append_div")
+common_question_div.innerHTML=commonquestion()
 
 
  import {mainNavbarContainer,navbarModal} from "./Components/navbar.js"
  let navbar_div1=document.getElementById("mainNavbarContainer")
   navbar_div1.innerHTML=mainNavbarContainer()
-  console.log(navbar_div1)
+  
+
+
 
   let navbar_div2=document.querySelector(".navbarModal")
   navbar_div2.innerHTML=navbarModal()
@@ -25,6 +30,7 @@
 
             let image = document.createElement("img")
             image.src = el.image
+            
 
             let title = document.createElement("h1")
             title.innerText = el.name
@@ -44,12 +50,13 @@
             div2.append(cal, gluten, serving)
             div.append(image, title, div2)
             document.getElementById("appendmenudiv").append(div)
+            document.getElementById("appendmenudiv").style.width="90%"
         })
     }
 
     append_data(data)
 
-
+ 
 
 
 
@@ -92,6 +99,7 @@
 
         let subtitle = document.createElement('p')
         subtitle.innerText = el.subtitle
+        subtitle.style.marginTop="15px"
 
         let div2 = document.createElement("div")
         div2.className = "benifit_div"
@@ -102,12 +110,15 @@
         let soy = document.createElement("p")
         soy.innerText = el.soy
         div2.append(cal, soy)
+        div2.style.marginTop="20px"
 
         let div3 = document.createElement("div")
         div3.className = "imgdiv"
+        div3.style.marginTop="30px"
 
         let div4 = document.createElement("div")
         div4.className = "imgappenddiv"
+
 
         let img1 = document.createElement("img")
         img1.src = el.image
@@ -115,50 +126,69 @@
         let img2 = document.createElement("img")
         img2.src = el.subimage
         div4.append(img1, img2)
+        div4.style.marginTop="20px"
 
         let div5 = document.createElement("div")
         div5.className = "description"
+        
 
         let special = document.createElement("h4")
         special.innerText = "What makes this dish special"
+        special.style.marginTop="20px"
+        
         div5.append(special)
+        div5.style.lineHeight="5px"
+       
 
         for (let i = 0; i < el.description.length; i++) {
             let disdata = document.createElement("p")
             disdata.innerText = el.description[i]
             div5.append(disdata)
+            disdata.style.marginTop="10px"
         }
+          
+        
+
 
         let div6 = document.createElement("div")
         div6.className = "nutrition"
         div5.append(div6)
+        div5.style.marginTop="10px"
 
         let n1 = document.createElement("div")
+        n1.style.marginTop="20px"
         let p1 = document.createElement("p")
         p1.innerText = "Calories"
         let p2 = document.createElement("p")
         p2.innerText = el.calories
+        p2.style.marginTop="15px"
         n1.append(p1, p2)
 
         let n2 = document.createElement("div")
+        n2.style.marginTop="20px"
         let p3 = document.createElement("p")
         p3.innerText = "Carbs"
         let p4 = document.createElement("p")
         p4.innerText = el.carb
+        p4.style.marginTop="15px"
         n2.append(p3, p4)
 
         let n3 = document.createElement("div")
+        n3.style.marginTop="20px"
         let p5 = document.createElement("p")
         p5.innerText = "Total fat"
         let p6 = document.createElement("p")
         p6.innerText = el.fat
+        p6.style.marginTop="15px"
         n3.append(p5, p6)
 
         let n4 = document.createElement("div")
+        n4.style.marginTop="20px"
         let p7 = document.createElement("p")
         p7.innerText = "Protein"
         let p8 = document.createElement("p")
         p8.innerText = el.protein
+        p8.style.marginTop="15px"
         n4.append(p7, p8)
 
         div6.append(n1, n2, n3, n4)
@@ -185,20 +215,26 @@
         let asd = document.querySelector(".menu_popup_append_div")
         asd.style.display = "block";
         //let g=JSON.parse(localStorage.getItem("product_data"))   
-        append_pop_div(el)
-
-       document.getElementsByTagName("body").style.opacity=0.7;
-
-
+        append_pop_div(el)  
     }
+
+  /*  document.addEventListener("mouseup",function(e){
+      let container=document.querySelector(".menu_popup_append_div")
+      if(!container.contains(e.target)){
+        container.style.display="none"
+      }
+    })*/
 
     let qwe = document.querySelector("#imagecross")
     qwe.onclick = () => {
-        let abc = document.querySelector(".menu_popup_append_div")
-        abc.style.display = "none";
-        window.location.reload();
-    }
-
+      removediv()
+  }
+  function removediv(){   
+      let abc = document.querySelector(".menu_popup_append_div")
+      abc.style.display = "none";
+      window.location.reload();
+  
+  }
 
   
   
@@ -238,102 +274,24 @@
       let res5 = data2.filter(function (el) {
         return el.catagory == "signeture-collection"
     })
-    append_data(res5)
-    
-    }
-   
+    append_data(res5)    
+    }   
 
     if(text=="All Meals"){
     window.location.reload()
     }
-
-    
-
-
-    
-
   }
 
  
+let signup=document.getElementById("sign_Up")
+signup.onclick=()=>{
+  window.location.href = "./loginAndSignup.html";
 
-let activeModalBtn=document.querySelector('.Navbar-Model_Active');
-let closeModalBtn=document.querySelector('.navbar-Icon_Change');
-let needsToActiveThisModal=document.querySelector('.navbarModal');
-// let thatCSS_HaveToPut=document.querySelector('');
-
-activeModalBtn.addEventListener('click',()=>{
-  let changeTheIcon=document.querySelector('.Navbar-Model_Active');
-  changeTheIcon.style.display='none';
-  let replaceToIcon=document.querySelector('.navbar-Icon_Change');
-  replaceToIcon.style.display='block'
-  //   changeTheIcon.innerHTML=(`<i class="fa-solid fa-xmark"></i>`) 
-
-  needsToActiveThisModal.classList.add('activeCss');
-})
-
-closeModalBtn.addEventListener('click',()=>{
-    let replaceToIcon=document.querySelector('.navbar-Icon_Change');
-    replaceToIcon.style.display='none'
-    let changeTheIcon=document.querySelector('.Navbar-Model_Active');
-    changeTheIcon.style.display='block';
-    needsToActiveThisModal.classList.remove('activeCss');
-  })
-  let screenSize = window.screen.width;
-
-function reportWindowSize() {
-    console.log("hello")
-    let widthOutput= window.innerWidth;
-    let changeTheIcon=document.querySelector('.Navbar-Model_Active');
-    let replaceToIcon=document.querySelector('.navbar-Icon_Change');
-  
-    if(widthOutput>=1000){
-       
-        changeTheIcon.style.display="none";
-    
-        replaceToIcon.style.display='none'
-    }
-    else{
-        if(replaceToIcon.style.display!=="block"){
-            changeTheIcon.style.display="block";
-        }
-    }
-  }
-  window.onresize = reportWindowSize;
-
-
-
-//   ------------------------Authentication Area------------------------ 
-
-let signupEvent=document.getElementById('sign_Up');
-signupEvent.addEventListener('click',()=>{
-    window.location.href="loginAndSignup.html"
-})
-
-let loginEvent=document.getElementById('log_In');
-loginEvent.addEventListener('click',()=>{
-    window.location.href="loginAndSignup.html"
-})
-
-
-// -----------------Appending the user data into the home page-----------------
-
-const lsUserData=JSON.parse(localStorage.getItem('activeUser'));
-console.log('lsUserData:', lsUserData)
-console.log("check")
-const userDataAppend=document.querySelector('#rightDiv .loggedInUserData');
-const signUpPlace=document.getElementById('sign_Up');
-const logInPlace=document.getElementById('log_In');
-if(lsUserData==null){
-    userDataAppend.style.display='none'
-    // logInPlace.style.display='block';
-    // signUpPlace.style.display='block';
 }
-else{
 
-    logInPlace.style.display='none';
-    signUpPlace.style.display='none';
-    userDataAppend.style.display="block"
-    userDataAppend.textContent=lsUserData.first_name;
+let login=document.getElementById("log_In")
+login.onclick=()=>{
+  window.location.href = "./loginAndSignup.html";
 
 }
 
