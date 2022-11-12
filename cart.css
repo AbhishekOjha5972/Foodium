@@ -1,4 +1,8 @@
 
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -121,14 +125,6 @@ body {
     transform: rotate(45deg);
 }
 
-/* .addMoreItem {
-    
-} */
-
-/* .deleteThisItem {
-    color: red;
-} */
-
 
 /* Navbar */
 #navbar {
@@ -204,7 +200,7 @@ body {
 
 #sidebar {
     width: 14%;
-    height: 95vh;
+    height: 100vh;
     border: 0px solid blue;
     background-color: #fffdf7;
     position: absolute;
@@ -301,6 +297,7 @@ body {
 }
 
 .cardDiv > .adding {
+    font-family: normal;
     width: 36px;
     height: 36px;
     text-align: center;
@@ -360,6 +357,10 @@ body {
     scale: 1.2;
 }
 
+.img_container {
+    border-radius: 12px 12px 0 0;
+}
+
 .cardDiv > div > img {
     width: 100%;
     border-radius: 12px 12px 0 0;
@@ -377,7 +378,6 @@ body {
 #detail-window {
     width: 55%;
     height: 85vh;
-    /* background-color:rgb(233, 182, 106); */
     background-color: #fffdf7;
     overflow: auto;
     position: absolute;
@@ -387,49 +387,144 @@ body {
     display: none;
 }
 
-.part1 {
+.topBox {
     width: 100%;
     height: 25%;
-    border: 0px solid blue;
+    border: 0px solid red;
+    position: relative;
+    background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.h3Name {
-    margin: 30px 0 0 30px;
-}
-.pSubtitle {
-    margin-left: 30px;
+
+.topBoxPart1 {
+    width: 75%;
+    height: 100%;
+    margin: auto 20px;
+    position: absolute;
+    left: 0;
+    border: 0px solid green;
 }
 
-.part2 {
-    width: 100%;
-    height: 60%;
-    margin-top: 20px;
-    border: 0px solid green;
+.topBoxPart1 > p:nth-child(4) {
+    margin-left: 20px;
+}
+
+.soyGluten {
+    display: inline;
+    padding: 5px;
+    background-color: rgb(250, 245, 245);
+}
+
+.topBoxPart2 {
+    width: 5%;
+    height: 20%;
+    font-size: 50px;
     display: flex;
-    align-items:initial;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 15px;
+    top: 0;
+    border: 0px solid red;
+    cursor: pointer;
+}
+
+.bottomBox {
+    width: 95%;
+    height: 70%;
+    margin: auto;
+    margin-top: 2%;
     border: 0px solid green;
+    overflow: auto;
 }
-.popupImgContainer {
-    width: 40%;
-    height: auto;
-    margin: 0 auto;
+
+.imgBox1 {
+    width: 45%;
+    height: 70%;
     border: 0px solid blue;
+    float: left;
+    margin-top: 15px;
 }
-.popupDetailContainer {
-    width: 55%;
-    height: auto;
-    margin: 0 auto;
-    font-style: italic;
-}
-.popupImg {
+.imgBox1 img {
     width: 100%;
-    border-radius: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 15px;
 }
-.hr {
-    border: 2px solid grey;
-    margin-bottom: 30px;
+
+.imgBox2 {
+    width: 45%;
+    height: 70%;
+    border: 0px solid green;
+    float: left;
+    margin-top: 15px;
 }
+.imgBox2 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.detailsBox3 {
+    width: 45%;
+    height: auto;
+    min-height: 85%;
+    padding: 0 13px;
+    border: 0px solid red;
+    float: right;
+    margin-top: 15px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.detailsBox4 {
+    width: 45%;
+    height: auto;
+    padding: 0 13px;
+    float: right;
+    margin-top: 15px;
+    border: 0px solid red;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.div0 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    border: 0px solid;
+}
+
+.div0 > div {
+    border: 0px solid yellow;
+}
+
+.cal_p {
+    margin-top: -17px;
+    color: grey;
+}
+
+.n_name {
+    margin-bottom: -10px;
+}
+
+.n_name + p {
+    color: gray;
+}
+
+.inside_info {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.gram_info {
+    margin-left: 10px;
+    margin-top: -10px;
+    font-size: 35px;
+}
+
+
 
 /* This is inside popup window */
 .popupCloser {
@@ -502,6 +597,7 @@ body {
 @media only screen and (max-width: 770px){
     #grid-container {
         width: 100%;
+        height: 60vh;
         margin: auto;
         right: 0;
         left: 0;
@@ -516,7 +612,7 @@ body {
     #billing-section {
         width: 100%;
         height: 90vh;
-        top: 130vh;
+        top: 80vh;
         /* right: 0; */
     }    
     #billing-section > div:nth-child(1) {
@@ -569,9 +665,3 @@ body {
         display: none;
     }
 }
-
-/* @media all and (max-width: 3000px) and (min-width:1301px) {
-    #grid-container {
-        grid-template-columns: repeat(4,1fr);
-    }
-};
