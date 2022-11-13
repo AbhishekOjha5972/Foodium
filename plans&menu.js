@@ -1,6 +1,4 @@
 
-
-
  import {mainNavbarContainer,navbarModal} from "./Components/navbar.js"
  let navbar_div1=document.getElementById("mainNavbarContainer")
   navbar_div1.innerHTML=mainNavbarContainer()
@@ -48,11 +46,6 @@
     }
 
     append_data(data)
-
-
-
-
-
 
     let arrow = document.getElementsByClassName("arrow_image")
     var acc = document.getElementsByClassName("question");

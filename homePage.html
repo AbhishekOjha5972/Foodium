@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>foodium.com</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/sqp9KQk/foodium-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./Components/navbar.css">
     <link rel="stylesheet" href="homePage.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -609,6 +610,48 @@
         </div>
     </div>
 
+
+
+    <!-- chatbot  -->
+    <div id="chatbotContainer">
+        <img src="https://static.ada.support/images/1445d110-5561-4cc0-870b-0f69880cec49.svg" alt="">
+    </div>
+    <div id="chatActiveDiv">
+        <div id="chatbot-ChildOne">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12,7a2,2,0,1,0-2-2A2,2,0,0,0,12,7Zm0,10a2,2,0,1,0,2,2A2,2,0,0,0,12,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z">
+                    </path>
+                </svg>
+                <div><span>F</span></div>
+            </div>
+            <div>
+                <!-- minimize SVG  -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z"></path>
+                </svg>
+
+                <!-- Close SVG  -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" id="closeBtnSVG">
+                    <path
+                        d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z">
+                    </path>
+                </svg>
+            </div>
+
+        </div>
+        <div id="chatbot-ChildTwo">
+
+        </div>
+        <div id="chatbot-ChildThree">
+            <div id="jsdata"></div>
+            <div id="neverMind">
+                <button>Never mind</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
@@ -623,3 +666,5 @@
         freeScoll: true,
     });
 </script>
+
+<script src="product_data.js"></script>

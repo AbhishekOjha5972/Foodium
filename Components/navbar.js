@@ -35,7 +35,7 @@ const mainNavbarContainer = () =>{
             </div>
             <!-- Middle div contain some child items like plans, how it works and etc -->
             <div id="middleDiv">
-                <a href="" class="middleDiv_childs" id="plansAndMenu">Plans & Menu</a>
+                <a href="#" class="middleDiv_childs" id="plansAndMenu">Plans & Menu</a>
                 <a href="" class="middleDiv_childs" id="howItWorks">How it Works</a>
                 <a href="" class="middleDiv_childs" id="gifts">gifts</a>
                 <a href="" class="middleDiv_childs" id="referAFriend">Refer a Friend</a>
@@ -83,4 +83,6 @@ const navbarModal = () =>{
 
 
 export {mainNavbarContainer,navbarModal}
+
+
 
