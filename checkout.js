@@ -1,12 +1,12 @@
 let logo = document.getElementById(`nav-logo-img`);
 logo.src = `https://i.ibb.co/sqp9KQk/foodium-logo.png`;
 logo.onclick = () => {
-  window.location.replace(`homePage.html`);
+  window.location.replace(`index.html`);
 };
 
 let project_name = document.getElementById(`project-name`);
 project_name.onclick = () => {
-  window.location.replace(`homePage.html`);
+  window.location.replace(`index.html`);
 };
 
 //some required accesses

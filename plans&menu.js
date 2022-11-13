@@ -12,6 +12,26 @@ common_question_div.innerHTML=commonquestion()
   navbar_div2.innerHTML=navbarModal()
 
 
+
+// Active userdata 
+const lsUserData = JSON.parse(localStorage.getItem('activeUser'));
+console.log('lsUserData:', lsUserData)
+console.log("check")
+const userDataAppend = document.querySelector('#rightDiv .loggedInUserData');
+const signUpPlace = document.getElementById('sign_Up');
+const logInPlace = document.getElementById('log_In');
+if (lsUserData == null) {
+    userDataAppend.style.display = 'none'
+    // logInPlace.style.display='block';
+    // signUpPlace.style.display='block';
+}
+else {
+    logInPlace.style.display = 'none';
+    signUpPlace.style.display = 'none';
+    userDataAppend.style.display = "block"
+    userDataAppend.textContent = lsUserData.first_name;
+}
+
     let data = JSON.parse(localStorage.getItem("product_data"))
     //console.log(data)
 
@@ -283,3 +303,9 @@ login.onclick=()=>{
 
 }
 
+
+
+const jumpToTheHomePage=document.getElementById('jumpToTheHomePage');
+jumpToTheHomePage.addEventListener('click',()=>{
+    window.location.href="index.html";
+})
