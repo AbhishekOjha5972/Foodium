@@ -41,7 +41,7 @@ window.onclick = function (event) {
 let form = document.getElementById(`checkout-form`);
 form.onsubmit = (e) => {
   e.preventDefault();
-  window.location.replace(`homePage.html`);
+  window.location.replace(`transition.html`);
   //fname, address, adr, city, state, zip, cname, ccnum, expmonth, expyear, cvv
   /* let fname_div = document.getElementById(`fname`).value;
   let address_div = document.getElementById(`address`).value;
