@@ -870,8 +870,167 @@
     align-items: center;
     justify-content: center;
 }
+
 #InvestorsArea>div>div>img {
-width: 100%;
+    width: 100%;
+}
+
+
+/* Chatbot */
+body {
+    position: relative;
+}
+
+#chatbotContainer {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+#chatActiveDiv {
+    width: 350px;
+    height: 70%;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    background-color: white;
+    z-index: 100;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* overflow-y: scroll; */
+    display: none;
+    animation: atanu .5s ease;
+    /* transition: display .9s ease; */
+}
+/* #chatActiveDivChange {
+    width: 350px;
+    height: 70%;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    background-color: white;
+    z-index: 100;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+    animation: abhishek .5s ease;
+} */
+
+#chatbot-ChildOne {
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 5px 0px;
+}
+
+#chatbot-ChildOne>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#chatbot-ChildOne>div:nth-child(1)>div {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(42, 109, 255);
+
+}
+
+#chatbot-ChildOne div:nth-child(1) {
+    width: 20%;
+    /* border: 1px solid red; */
+}
+
+#chatbot-ChildOne div:nth-child(2) {
+    width: 20%;
+    /* border: 1px solid red; */
+}
+#chatbot-ChildTwo{
+    /* border: 1px solid blue; */
+    height: 80%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items:center;
+    box-sizing: border-box;
+        overflow-y: scroll;
+    
+
+
+}
+
+#chatbot-ChildTwo > div{
+    border: 1px solid blue;
+    width: 90%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px 3px;
+    background-color: rgb(42,109,255);
+    color: white;
+}
+#chatbot-ChildTwo > div:nth-child(1){
+margin-top: 10px;
+}
+
+#chatbot-ChildThree {
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 0 0 10px 10px;
+}
+
+#chatbot-ChildThree div:nth-child(2)>button {
+   animation: name duration timing-function delay iteration-count direction fill-mode;
+    height: 30px;
+    width: 130px;
+    border: none;
+    background-color: white;
+}
+
+@keyframes atanu {
+    0%{
+        height: 0;
+        width: 0;
+
+    }
+    100%{
+        width: 350px;
+        height: 70%;
+    }
+}
+
+@keyframes atanu {
+    100%{
+        width: 350px;
+        height: 70%;
+        
+    }
+    0%{
+        height: 0;
+        width: 0;
+    }
 }
 
 /* Responsiveness  */
