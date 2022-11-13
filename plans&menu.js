@@ -1,8 +1,8 @@
 
 /*_________________Commonquestion_appendin_______________________________*/
-import commonquestion from "./Components/commonquestion.js" 
+/*import commonquestion from "./Components/commonquestion.js" 
 let common_question_div=document.getElementById("common_question_append_div")
-common_question_div.innerHTML=commonquestion()
+common_question_div.innerHTML=commonquestion()*/
 
 /*______________________Navbar Export_________________________________________*/
  import {mainNavbarContainer,navbarModal} from "./Components/navbar.js"
