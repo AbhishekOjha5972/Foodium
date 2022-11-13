@@ -126,6 +126,12 @@ jumpPlansAndMenu.addEventListener('click', () => {
 })
 
 
+const jumpToTheHomePage=document.getElementById('jumpToTheHomePage');
+jumpToTheHomePage.addEventListener('click',()=>{
+    window.location.href="index.html";
+})
+
+
 
 // Chatbot 
 
@@ -211,3 +217,6 @@ closeBtn.addEventListener('click', () => {
     const chatActiveDiv = document.getElementById('chatActiveDiv');
     chatActiveDiv.style.display = "none";
 })
+
+
+

@@ -94,7 +94,7 @@ Auth_logInBTN.addEventListener('click', () => {
             if (Element.phone_No == takePhoneNumber) {
                 appendTheUserData(Element);
                 alert('Login successful')
-                window.location.href = "homePage.html"
+                window.location.href = "index.html"
             }
         })
     }
@@ -103,13 +103,13 @@ Auth_logInBTN.addEventListener('click', () => {
 const appendTheUserData = (Element) => {
     localStorage.setItem('activeUser', JSON.stringify(Element));
     console.log("login successful")
-    window.location.href='homePage.html'
+    window.location.href='index.html'
 }
 
 // jump to the home page 
 const jumpToHomePage=document.getElementById('Auth-Logodiv');
 jumpToHomePage.addEventListener('click',()=>{
-    window.location.href="homePage.html"
+    window.location.href="index.html"
 })
 
 

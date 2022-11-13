@@ -4,7 +4,7 @@ const mainNavbarContainer = () =>{
         <div id="freshlyDiv">
             <!-- here we are putting content-->
             <!-- Meaning of fc is "First Child" -->
-            <a href="homePage.html">
+            <a href="" id="jumpToTheHomePage">
                 <div id="fc_LeftContentDiv">
                     <img src="https://i.ibb.co/sqp9KQk/foodium-logo.png" alt="">
                     <span>foodium</span>

@@ -1864,7 +1864,7 @@ function gotoCheckOut() {
     let totalLength = JSON.parse(localStorage.getItem('selectedItemsArr'));
 
     if( totalLength.length >= 4 ) {
-        window.location.href = "";
+        window.location.href = "checkout.html";
     }
 
 }
