@@ -1,32 +1,4 @@
-/*
-let data1 = [
-  {
-    name: "BBQ Bison Burger*",
-    subtitle: "with Masterful Mac & Cheese",
-    image: "https://assets-global.website-files.com/5d03b4e13011831ae4624b37/636a66bb765dff2da0c2e1fb_635823f4ce4929328b1f96f9_production-meal-image-9e969581-d09c-4617-9b17-d455d23c8952.jpeg",
-    ,
-    calories: "610 cal",
-    serving: "single-serve",
-    soy: "Soy free",
-    gluten: "gluten-free",
-    description:
-      ["*This naked (aka bunless) burger is a premium blend of 69% ground bison, 23% beef, and 8% umami-rich mushrooms  Slathered in our smoky, honey-sweetened BBQ sauce", "Over a hearty mix of roasted broccoli, onions, and Parisian carrots seasoned with garlic and parsley"],
-    carb: "42g",
-    fat: "28g",
-    protein: "30g"
-  },
-]
 
-
-        subimage:"" ,
-        soy:"" ,
-        gluten:"" ,
-        carb:"" ,
-        fat:"" ,
-        protein:"",
-        description:[],
-
-*/
 let product_data = [
     {
         name: "BBQ Bison Burger*",

@@ -1,16 +1,13 @@
 
+/*_________________Commonquestion_appendin_______________________________*/
 import commonquestion from "./Components/commonquestion.js" 
 let common_question_div=document.getElementById("common_question_append_div")
 common_question_div.innerHTML=commonquestion()
 
-
+/*______________________Navbar Export_________________________________________*/
  import {mainNavbarContainer,navbarModal} from "./Components/navbar.js"
  let navbar_div1=document.getElementById("mainNavbarContainer")
   navbar_div1.innerHTML=mainNavbarContainer()
-  
-
-
-
   let navbar_div2=document.querySelector(".navbarModal")
   navbar_div2.innerHTML=navbarModal()
 
@@ -27,9 +24,12 @@ common_question_div.innerHTML=commonquestion()
             div.onclick = () => {
                 addpopup(el)
             }
-
+             
+            let div3=document.createElement("div")
+            div3.className="hover_img"
             let image = document.createElement("img")
             image.src = el.image
+            div3.append(image)
             
 
             let title = document.createElement("h1")
@@ -48,7 +48,7 @@ common_question_div.innerHTML=commonquestion()
             serving.innerText = el.serving
 
             div2.append(cal, gluten, serving)
-            div.append(image, title, div2)
+            div.append(div3, title, div2)
             document.getElementById("appendmenudiv").append(div)
             document.getElementById("appendmenudiv").style.width="90%"
         })
@@ -56,16 +56,8 @@ common_question_div.innerHTML=commonquestion()
 
     append_data(data)
 
- 
-
-
-
-
     let arrow = document.getElementsByClassName("arrow_image")
     var acc = document.getElementsByClassName("question");
-
-
-
 
     for (let i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
@@ -82,14 +74,16 @@ common_question_div.innerHTML=commonquestion()
 
     //_________________________________________________________________________________________________________//
 
-
-
-  
-
-
-
     function append_pop_div(el) {
-        // data.forEach(function (el) {
+
+      let cross=document.createElement("img")
+      cross.className="closediv"
+      cross.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAZlBMVEX///8AAADExMTq6uq1tbXb29u4uLjy8vIXFxe9vb2bm5vAwMDm5ubW1tafn58aGhqsrKxFRUUyMjLOzs4rKys9PT0SEhIjIyMKCgqGhoZtbW34+PhZWVlnZ2dNTU2mpqaSkpJ6enpbECUFAAAEQ0lEQVR4nLWb63aqMBSEk1rFXlGr1FptT9//JU8jpELIZfYl8xeWzJr5DIQEY0Z6OLV2+7owNfW5fE4eW5ztVe1dveu/XPZdu/9o4ga21quahc1wgf0ycrA5WFvbwubvAuu5haa1Y93XMPA4vsJLcHBxsFM9VDZg7TSFEQPVivgOLrAep9CECTg96RrYzC4wshAwUIWF19gV3oaDMwYqpPAYv0KfQoQBLzUW5hX0Ol5TOCcNqKUQQjhNYZUxoMRClIFBbWMuWQcaKSQYGLQx67wDOQspBgadTcGAeHTMMHBVZ76KFkQs5Bi4qi16tCIW8gw4ncwiPiBOxGahwIDTypi78llcFoB8t+48xAKLhSID1u76h1LEAoOFMgN2759a7wELZBYABuztsfwBOHtFMwAw8D6eFyBFkCwAFeymE4cnwAKhCADCfThzUWWBxgAlBbAIKgNeaizQGaCkABTBYcBLhQUeA5QUCkUgCeTeD4hZ4DPghYyOmSKABN7zBoQsyBjwErAAjANZBrzYLMgZ8GKyACTQYgaYLOgw4IWwEDy4SceBUGQW9Bjwyk9oe42KABhYU9+UkizoMuBFeIjXZoBi4TqV0WfACywCYKDjvi2HLAAMHPmv65EiymIxoGmByYAXUkReggp0LLAhvElWhIgBDQtCBrz4RYgZkFog34zS4hWx01w35FhQYsALeXCbSo0BLyoLrf7SLa0IVQY4FpLTc5kILNRaPUemMk7RVzQ6wopQ/htOhaRQMYFffSAOwkVtTf1ALRzfyr/E1Aky8Guh1hYKLIGr6qSAMFC1CEICdVIgGtBngWpAPQUKA1UssAxo7mX54RnQY4GZgJNOEf/4BnQsCBJwkhfxIzMgZ0GYgJOsCBEDGhaQBLryKfwiAAPdEnl25FpAKijuaOrFKwIxcN1kiMwjOBYQBoZdjnW2UCAM/D0U12ABrqCXPgvAy+rpRlNtFoAKjsF+X91NRUAF3WzDsSYL5Ap66bEArJjEDOhtJGFV0EuHBcBACCHNQikFJgNexEXCiNgMaFkAKojs+59IxgLCQPEFiYQFcQW9+EUA64aIAb4F4F9QYsCLt+sTMFBmgGIhTEGtgl70AVrZAMbC+E8JVJC6F6REY0GVAS/KTj9kBwUxASecBcQA61Uxuq/prXwalQEvgAW3HFX4iMNyGPACWPg2zXvxJGYCTmUWvsyyOPsWGEBYMM+F7xfQe0FKJRbWxuzyZ4gXTAosXEqPJcIEnPIsrIxpciEoGMincHYnLJOfNHHHgVBpFrb9utwydVxt0SyVwsEvDL7Ejysl4BRnob19dRwrIj0z4iiWwmH82fPcghYDXnMWttO12RkL6gun4eh4CBeHAxaUE3CastDOvzxfjoZnXQa8xkUcYp++3+5R/NsxamEbX59/3veH6+0fuBtyPqc2CHxuzsfusvmsZcCYxevWtqfJ3Pk/1O43zDn7dvAAAAAASUVORK5CYII="
+       
+       cross.onclick=()=>{
+        removediv()
+       }
+
 
         let titlediv = document.createElement("div")
         titlediv.className = "titleinfo"
@@ -99,7 +93,7 @@ common_question_div.innerHTML=commonquestion()
 
         let subtitle = document.createElement('p')
         subtitle.innerText = el.subtitle
-        subtitle.style.marginTop="15px"
+        subtitle.style.marginTop="25px"
 
         let div2 = document.createElement("div")
         div2.className = "benifit_div"
@@ -145,11 +139,7 @@ common_question_div.innerHTML=commonquestion()
             disdata.innerText = el.description[i]
             div5.append(disdata)
             disdata.style.marginTop="10px"
-        }
-          
-        
-
-
+        }   
         let div6 = document.createElement("div")
         div6.className = "nutrition"
         div5.append(div6)
@@ -195,7 +185,9 @@ common_question_div.innerHTML=commonquestion()
 
         div3.append(div4, div5)
 
-        titlediv.append(title, subtitle, div2, div3)
+        titlediv.append(cross,title, subtitle, div2, div3,)
+
+        
 
         let x = document.querySelector(".menu_popup_append_div")
 
@@ -210,29 +202,26 @@ common_question_div.innerHTML=commonquestion()
 
 
     function addpopup(el) {
-        //append_pop_div(el)
-        // console.log(i)
-        let asd = document.querySelector(".menu_popup_append_div")
-        asd.style.display = "block";
-        //let g=JSON.parse(localStorage.getItem("product_data"))   
-        append_pop_div(el)  
+      let asd = document.querySelector(".menu_popup_append_div")
+      if(asd.style.display=="inline"){
+        asd.style.display="none"
+        asd.innerHTML=null
+      }else{
+        asd.style.display = "inline";         
+        append_pop_div(el)
+
+      }
+         
     }
 
-  /*  document.addEventListener("mouseup",function(e){
-      let container=document.querySelector(".menu_popup_append_div")
-      if(!container.contains(e.target)){
-        container.style.display="none"
-      }
-    })*/
+   
 
-    let qwe = document.querySelector("#imagecross")
-    qwe.onclick = () => {
-      removediv()
-  }
+  
   function removediv(){   
       let abc = document.querySelector(".menu_popup_append_div")
       abc.style.display = "none";
-      window.location.reload();
+      abc.innerHTML=null
+      //window.location.reload();
   
   }
 
@@ -266,8 +255,7 @@ common_question_div.innerHTML=commonquestion()
       let res4 = data2.filter(function (el) {
         return el.catagory == "puerly-plant"
     })
-    append_data(res4)
-        
+    append_data(res4)        
     }
 
     if(text=="Signature Collection"){
