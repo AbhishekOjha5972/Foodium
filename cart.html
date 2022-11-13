@@ -15,7 +15,6 @@
 
         <div id="navbar">
             <a href=""> <i style="font-size: 12px;" class="fa-solid fa-less-than"></i> </a>
-            <!-- <i class="fa-solid fa-delete-left"></i> -->
             <h3>Meals <i id="mealsArrow" class="fa-solid fa-greater-than"></i> </h3>
             <a id="customer-support" href="">Customer Support</a>
         </div>
@@ -24,12 +23,19 @@
             <div>
                 <p id="delievery-date">Delievering to:</p>
                 <div>
-                    <p style="font-weight: bold;"> Wednesday, Nov 16</p>
+                    <input style="border: none" type="date"> 
                 </div>
             </div>
             <p id="clear">Clear All</p>
 
             <div class="clicked-items"></div>
+
+            <div class="totalBillContainer">
+                <div id="subTotal">Sub-Total: $ <span id="subTotal_span"></span> </div>
+                <div id="countItems"></div>
+                <button id="continue">Next</button>
+            </div>
+
         </div>
 
         <div id="below-navbar">
@@ -84,9 +90,7 @@
 
         <div id="grid-container"></div>
 
-        <div id="detail-window">
-            <h1 class="popupCloser">+</h1>
-        </div>
+        <div id="detail-window"></div>
 
     </div>
 

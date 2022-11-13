@@ -2,18 +2,19 @@ body,
 html {
     height: 100%;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
 /*body>div {
-    opacity: 0.55;
-   
+    opacity: 0.55;    
     
 }*/
 
 * {
     box-sizing: border-box;
+
 }
 
 #flexible_plan {
@@ -84,7 +85,7 @@ a{
     text-align: center;
     margin-top: 2px;
     cursor: pointer;
-   
+
 }
 
 #meals div>div {
@@ -117,16 +118,16 @@ a{
 
 #shipingtax button {
     padding: 13px 16px 12px;
-    background-color: #1349dd;   
+    background-color: #1349dd;
     color: #fff;
     font-size: 18px;
     line-height: 20px;
-    letter-spacing: .5px;  
+    letter-spacing: .5px;
     text-transform: capitalize;
     border: 0px;
     margin-top: 20px;
 
-    
+
 }
 
 #shipingtax button:hover {
@@ -178,7 +179,7 @@ a{
 }
 
 #appendmenudiv {
-    width: 96%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -196,10 +197,13 @@ a{
     transition: transform .5s ease;
 }
 
-#appendmenudiv img:hover {
-    cursor: pointer;
-    /* transform: scale(1.5);*/
-
+#appendmenudiv img:hover{
+    Scale : 1.2;
+    cursor:pointer
+}
+.hover_img{
+    overflow : hidden;
+    transition : 0.5s;
 }
 
 #appendmenudiv h1 {
@@ -441,6 +445,7 @@ div.imgdiv {
     width: 95%;
     margin-top: 10px;
 
+
 }
 
 .description h4 {
@@ -468,13 +473,6 @@ div.imgdiv {
     font-weight: 200;
 }
 
-#imagecross {
-    width: 10px;
-    margin-left: 95%;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
 
 #footer {
     width: 70%;
@@ -491,17 +489,359 @@ div.imgdiv {
     margin: auto;
     border: 1px solid black;
     height: 400px;
+    margin-top: 50px;
 }
 
 .footersubdiv div:first-child {
     width: 90px;
 }
 
+/*Footer Section*/
+#FooterSection {
+    width: 100%;
+     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#FooterSection>div {
+    width: 70%;
+       
+    display: flex;
+    margin: auto;
+
+}
+
+#FooterSection>div>div {
+    width: 23%;
+    margin: auto;
+    height: 100%;
+}
+
+#FooterSection img {
+    
+    padding-bottom: 20px;
+
+}
+#FS-ChildOne a span {
+    display: flex;
+    margin-left: 60px;
+    margin-top: -50px;   
+    padding-left: 5px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(3, 81, 78);
+}
+
+#FS-ChildOne span {
+    display: block
+}
+
+#foodium_inc a {
+    margin-top: 200px;
+    font-size: 15px;
+    color: #333;
+}
+
+#FS-ChildOne img {
+    width: 50px;
+    display: flex;
+    margin-top: 5px;
+}
+
+#FS-ChildTwo a,#FS-ChildTwo span,#FS-ChildThree a,#FS-ChildThree span,#FS-ChildFour span{
+    display: block;
+    margin-bottom: 16px;
+    font-family: Favoritfreshly,sans-serif;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+}
+.Second_img{
+    margin-left: 10px;
+    width: 10%;    
+}
+.App_store{   
+    width: 150px;
+    margin-top: -5px;
+}
+.closediv{
+    width: 10px;
+    margin-left: 95%;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+/*____________________Footer CSS ___________________________________________*/
+#FooterSection {
+    position: relative;
+    width: 100%;
+    /* height: 500px; */
+    padding: 30px 0;
+    /* border: 3px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#FooterSection a {
+    color: rgb(114, 110, 110);
+    margin-top: 15px;
+}
+
+#FooterSection span {
+    margin-top: 15px;
+}
+
+#FooterSection>div {
+    width: 70%;
+    /* border: 3px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+#FS-ChildOne {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+#FS-ChildOne>a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+#FS-ChildOne>a>div>img {
+    width: 25px;
+    height: 25px;
+    /* border: 1px solid red; */
+}
+
+#FS-ChildOne>a>span {
+    font-size: 25px;
+    color: rgb(3, 82, 78);
+    font-weight: 600;
+    margin-top: 0;
+}
+
+#FS-ChildOne>a:nth-child(1) {
+    /* color: rgb(114,110,110); */
+    margin-top: 10px;
+}
+
+#FS-ChildOne>a:nth-child(2) {
+    color: rgb(114, 110, 110);
+    margin-top: 10px;
+}
+
+
+#FS-ChildTwo {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+#FS-ChildTwo>span {
+    color: rgb(3, 82, 78);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#FS-ChildThree {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+#FS-ChildThree>span {
+    color: rgb(3, 82, 78);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#FS-ChildFour {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+#FS-ChildFour>span {
+    color: rgb(3, 82, 78);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#FS-ChildFour>div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+#FS-ChildFour>div>a {
+    /* border: 1px solid yellow; */
+    display: flex;
+    align-content: center;
+    justify-content: left;
+
+}
+
+#FS-ChildFour>div>a>img {
+    height: 20px;
+    width: 20px;
+}
+
+#FS-ChildFour>a {
+    /* border: 1px solid gray; */
+    display: flex;
+    height: 30px;
+    width: 100px;
+    align-items: center;
+
+}
+
+#FS-ChildFour>a>img {
+
+    width: 100%;
+}
+
+/* styling of the second footer section  */
+#For-Responsiveness-Footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    /* border: 1px solid blue; */
+    padding: 30px 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+#For-Responsiveness-Footer>div {
+    /* border: 1px solid red; */
+    width: 50%;
+}
+#For-Responsiveness-Footer a{
+     color: rgb(114, 110, 110);
+}
+#For-Responsiveness-Footer span{
+    color: rgb(114, 110, 110);
+}
+#FRF-ChildOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    line-height: 30px;
+    /* border: 1px solid red; */
+
+}
+
+#FRF-ChildThree {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px 0;
+
+}
+
+#FRF-ChildThree>div {
+    width: 100px;
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
+    justify-content: center;
+    align-items: center;
+}
+
+#FRF-ChildThree>div>a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    /* border: 1px solid red; */
+    justify-content: center;
+
+}
+
+#FRF-ChildThree>div>a>img {
+    height: 10px;
+    width: 10px;
+}
+
+#FRF-ChildFour {
+    display: flex;
+    /* border: 1px solid black; */
+    width: 100%;
+    justify-content: center;
+    gap: 0 5%;
+}
+
+#FRF-ChildFour>a {
+    width: 50%;
+    height: 30%;
+    /* height: 30px; */
+    /* border: 1px solid blue; */
+}
+
+#FRF-ChildFour>a>img {
+/* height: fit-content; */
+width: 100%;
+}
+#FRF-ChildFive{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Responsiveness  */
+
+@media screen and (min-width:775px) and (max-width:1000px) {
+    #FooterSection {
+        position: relative;
+        top: 2500px;
+    }
+
+    #FooterSection>div {
+        width: 90%;
+        transition: .6s;
+
+    }
+}
+
+@media screen and (max-width:775px) {
+    #FooterSection {
+        display: none;  
+    }
+}
 
 
 
+@media screen and (max-width:774px) {
+    #For-Responsiveness-Footer{
+        display: block; 
+        display: flex;
+    }
+    #For-Responsiveness-Footer>div {
+        width: 60%;
+        transition: .3s;
+    }
 
+}
 
+/*____________________Footer CSS ____________________________________________*/
 
 
 
@@ -544,6 +884,26 @@ div.imgdiv {
     #selectfoodcatagory {
         display: block;
     }
+    .nutrition{
+        display: block;
+        margin-top: 20px;
+        margin: auto;
+    }
+    .description{
+        margin: auto;
+        width: 80%;
+        word-break: break-all;
+        overflow: visible;
+    }
+   
+    #FooterSection >div{
+        display: block;
+        margin-top: 100px;
+    }
+    #FS-ChildTwo,#FS-ChildThree,#FS-ChildFour{
+        padding-top: 30px;      
+         text-align: center;
+       }
 
 }
 
@@ -575,6 +935,10 @@ div.imgdiv {
     .imgappenddiv img:nth-child(2) {
         display: none;
     }
+    .imgappenddiv img:nth-child(1){
+        width: 100%;
+    }
+
 
     .titleinfo {
         text-align: center;
@@ -600,6 +964,25 @@ div.imgdiv {
 
     #selectfoodcatagory {
         display: block;
+    }
+    .nutrition{
+        display: block;
+        margin-top: 20px;
+        margin: auto;
+    }
+    .description{
+        margin: auto;
+        width: 80%;
+        /*word-break: break-all;*/
+        overflow: visible;
+    }
+    #FooterSection >div{
+        display: block;
+       
+    }
+    #FS-ChildTwo,#FS-ChildThree,#FS-ChildFour{
+     padding-top: 30px;      
+      text-align: center;
     }
 
 }

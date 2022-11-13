@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plans & Menu</title>
     <link rel="stylesheet" href="./Components/navbar.css">
-    
+
     <link rel="stylesheet" href="plans&menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +19,13 @@
 
     <div id="mainNavbarContainer" style="position:sticky ; z-index: 20001;"></div>
 
-    <div class="navbarModal" style="position:sticky ; z-index: 20004;"></div>
+    <div class="navbarModal" style="position:sticky ; z-index: 20001;"></div>
 
 
 
 
     <div id="flexible_plan">
-        <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6192ce7669f68694a8b969af_Group%20(8).svg"
-            alt="">
+       
         <h1>Flexible plans that fit your life</h1>
         <p>We offer anywhere from 4–12 meals per week, with meals as low as <b>$9.58 each. The bigger your box, the more
                 you’ll save—</b> and you can always pause or change your plan at any time.</p>
@@ -35,6 +34,7 @@
 
 
     <div id="meals">
+
 
         <div class="mealsdiv" style="position:sticky; z-index: 2000;">
             <img class="mealimg"
@@ -69,8 +69,10 @@
             <img class="mealimg"
                 src="https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492cddaec74cb5161350_8-9%20Meals-p-500.png"
                 alt="">
-            <a href="./cart.html"> <p id="mealnumber3">8-9 Meals</p></a>
-           
+            <a href="./cart.html">
+                <p id="mealnumber3">8-9 Meals</p>
+            </a>
+
 
 
         </div>
@@ -111,7 +113,7 @@
     </div>
 
 
-    <div id="shipingtax" style="z-index:10001;position: sticky;">
+    <div id="shipingtax" style="z-index:1000;position: sticky;">
         <p>Shipping and tax added at checkout. Prices are rounded for your convenience.</p>
         <a href="./cart.html"><button>Get Started</button></a>
     </div>
@@ -182,11 +184,9 @@
     <div id="common_question_append_div"></div>
 
 
-    <div class="menu_pop_up" style="opacity:1">
-        <div class="menu_popup_append_div" style="opacity:1;">
-            <img id="imagecross"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAZlBMVEX///8AAADExMTq6uq1tbXb29u4uLjy8vIXFxe9vb2bm5vAwMDm5ubW1tafn58aGhqsrKxFRUUyMjLOzs4rKys9PT0SEhIjIyMKCgqGhoZtbW34+PhZWVlnZ2dNTU2mpqaSkpJ6enpbECUFAAAEQ0lEQVR4nLWb63aqMBSEk1rFXlGr1FptT9//JU8jpELIZfYl8xeWzJr5DIQEY0Z6OLV2+7owNfW5fE4eW5ztVe1dveu/XPZdu/9o4ga21quahc1wgf0ycrA5WFvbwubvAuu5haa1Y93XMPA4vsJLcHBxsFM9VDZg7TSFEQPVivgOLrAep9CECTg96RrYzC4wshAwUIWF19gV3oaDMwYqpPAYv0KfQoQBLzUW5hX0Ol5TOCcNqKUQQjhNYZUxoMRClIFBbWMuWQcaKSQYGLQx67wDOQspBgadTcGAeHTMMHBVZ76KFkQs5Bi4qi16tCIW8gw4ncwiPiBOxGahwIDTypi78llcFoB8t+48xAKLhSID1u76h1LEAoOFMgN2759a7wELZBYABuztsfwBOHtFMwAw8D6eFyBFkCwAFeymE4cnwAKhCADCfThzUWWBxgAlBbAIKgNeaizQGaCkABTBYcBLhQUeA5QUCkUgCeTeD4hZ4DPghYyOmSKABN7zBoQsyBjwErAAjANZBrzYLMgZ8GKyACTQYgaYLOgw4IWwEDy4SceBUGQW9Bjwyk9oe42KABhYU9+UkizoMuBFeIjXZoBi4TqV0WfACywCYKDjvi2HLAAMHPmv65EiymIxoGmByYAXUkReggp0LLAhvElWhIgBDQtCBrz4RYgZkFog34zS4hWx01w35FhQYsALeXCbSo0BLyoLrf7SLa0IVQY4FpLTc5kILNRaPUemMk7RVzQ6wopQ/htOhaRQMYFffSAOwkVtTf1ALRzfyr/E1Aky8Guh1hYKLIGr6qSAMFC1CEICdVIgGtBngWpAPQUKA1UssAxo7mX54RnQY4GZgJNOEf/4BnQsCBJwkhfxIzMgZ0GYgJOsCBEDGhaQBLryKfwiAAPdEnl25FpAKijuaOrFKwIxcN1kiMwjOBYQBoZdjnW2UCAM/D0U12ABrqCXPgvAy+rpRlNtFoAKjsF+X91NRUAF3WzDsSYL5Ap66bEArJjEDOhtJGFV0EuHBcBACCHNQikFJgNexEXCiNgMaFkAKojs+59IxgLCQPEFiYQFcQW9+EUA64aIAb4F4F9QYsCLt+sTMFBmgGIhTEGtgl70AVrZAMbC+E8JVJC6F6REY0GVAS/KTj9kBwUxASecBcQA61Uxuq/prXwalQEvgAW3HFX4iMNyGPACWPg2zXvxJGYCTmUWvsyyOPsWGEBYMM+F7xfQe0FKJRbWxuzyZ4gXTAosXEqPJcIEnPIsrIxpciEoGMincHYnLJOfNHHHgVBpFrb9utwydVxt0SyVwsEvDL7Ejysl4BRnob19dRwrIj0z4iiWwmH82fPcghYDXnMWttO12RkL6gun4eh4CBeHAxaUE3CastDOvzxfjoZnXQa8xkUcYp++3+5R/NsxamEbX59/3veH6+0fuBtyPqc2CHxuzsfusvmsZcCYxevWtqfJ3Pk/1O43zDn7dvAAAAAASUVORK5CYII="
-                alt="">
+    <div class="menu_pop_up" style="opacity:1;line-height: 5px;">
+        <div class="menu_popup_append_div" style="opacity:1;z-index: 4000;">
+           
         </div>
 
     </div>
@@ -195,11 +195,129 @@
     <hr style="margin-top: 50px;">
 
 
+    <!--Footer Section-__________________________________________________________________________________________-->
+         <div id="FooterSection">
+        <div>
+            <div id="FS-ChildOne">
+                <a href="homePage.html">
+                    <div><img  style="height: 50px;width: 50px;" src="https://i.ibb.co/sqp9KQk/foodium-logo.png" alt=""></div>
+                    <span>foodium</span>
+                </a>
+                <a href="#">@Foodium Inc.</a>
+            </div>
+            <div id="FS-ChildTwo">
+                <span>Company</span>
+                <a href="https://freshly.wd5.myworkdayjobs.com/freshly_careers">Careers</a>
+                <a href="https://www.freshly.com/contact">Contact Us</a>
+                <a href="https://www.freshly.com/press">Press</a>
+                <a href="https://www.freshly.com/terms">Terms</a>
+                <a href="https://www.freshly.com/privacy">Privacy</a>
+                <a href="https://www.freshly.com/affiliates">Affiliates</a>
+                <a href="https://www.freshly.com/partnerships">Partnerships</a>
+            </div>
+            <div id="FS-ChildThree">
+                <span>Learn More</span>
+                <a href="https://www.freshly.com/plans-and-menu">Plans & Menu</a>
+                <a href="https://www.freshly.com/why-freshly">Why Freshly?</a>
+                <a href="https://www.freshly.com/gifts">Girts</a>
+                <a href="https://support.freshly.com/hc/en-us">FAQs</a>
+                <a href="https://support.freshly.com/hc/en-us">Blog</a>
+                <a href="https://www.freshly.com/students">Students</a>
+            </div>
+            <div id="FS-ChildFour">
+                <span>Join Us</span>
+                <div>
+                    <a href="https://www.facebook.com/freshly"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bbc67c09879c5a19b_5d795c37fedbb6017d824b02_icons8-facebook-old-30.jpg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/freshly/"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423ad92101de48f410c7_5d10dfc0ef515f74b875a42c_icons8-instagram-50.jpg"
+                            alt=""></a>
+                    <a href="https://twitter.com/freshly"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bd050163202b341e8_5d10dfc00442bfc99d3d6828_icons8-twitter-filled-50.jpg"
+                            alt=""></a>
+                    <a href="https://www.pinterest.com/FreshlyHQ/"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423a6b26e039d505425e_5d10dfbfef515faad975a42b_icons8-pinterest-filled-50.jpg"
+                            alt=""></a>
+                </div>
+
+
+
+                <a href="https://itunes.apple.com/app/apple-store/id1195648107?pt=118497527&ct=WebsiteFooter&mt=8">
+                    <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d6439d4fb92e7630e46976b_Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                        alt="">
+                </a>
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.freshly.meal&utm_source=website&utm_campaign=footer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d643dd558306bfe1df5ef8b_google-play-badge-p-1080.png"
+                        alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- newFooter for responsiveness -->
+
+    <div id="For-Responsiveness-Footer">
+        <div>
+            <div id="FRF-ChildOne">
+                <a href="http://www.freshly.com/blog">Blog</a>
+                <a href="https://freshly.wd5.myworkdayjobs.com/freshly_careers">Careers</a>
+                <a href="https://www.freshly.com/contact">Contact Us</a>
+                <a href="https://www.freshly.com/press">Press</a>
+                <a href="https://www.freshly.com/terms">Tearm</a>
+                <a href="https://www.freshly.com/privacy">Privacy</a>
+                <a href="https://support.freshly.com/hc/en-us">FAQs</a>
+                <a href="https://www.freshly.com/students">Students</a>
+            </div>
+            <!-- <div id="FRF-ChildTwo">
+            </div> -->
+            <div id="FRF-ChildThree">
+                <div>
+                    <a href="https://www.facebook.com/freshly"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bbc67c09879c5a19b_5d795c37fedbb6017d824b02_icons8-facebook-old-30.jpg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/freshly/"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423ad92101de48f410c7_5d10dfc0ef515f74b875a42c_icons8-instagram-50.jpg"
+                            alt=""></a>
+                    <a href="https://twitter.com/freshly"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423bd050163202b341e8_5d10dfc00442bfc99d3d6828_icons8-twitter-filled-50.jpg"
+                            alt=""></a>
+                    <a href="https://www.pinterest.com/FreshlyHQ/"><img
+                            src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f52423a6b26e039d505425e_5d10dfbfef515faad975a42b_icons8-pinterest-filled-50.jpg"
+                            alt=""></a>
+                </div>
+            </div>
+            <div id="FRF-ChildFour">
+                <a href="https://itunes.apple.com/app/apple-store/id1195648107?pt=118497527&ct=WebsiteFooter&mt=8">
+                    <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d6439d4fb92e7630e46976b_Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                        alt="">
+                </a>
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.freshly.meal&utm_source=website&utm_campaign=footer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img
+                        src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5d643dd558306bfe1df5ef8b_google-play-badge-p-1080.png"
+                        alt="">
+                </a>
+            </div>
+            <div id="FRF-ChildFive">
+                <span>Foodium Inc.</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--_______________________________________________________________________________________________________________-->    
+
+    
+
+
+
+
 
 
 
 </body>
-
 
 </html>
 
