@@ -1541,14 +1541,11 @@ sortByCalories = (data) => {
     });
 
     append(data);
-
 }
 
 document.getElementById('calories').addEventListener('click', function(){
     sortByCalories(product_data);
 });
-
-
 
 // Sorting normally
 sortNormally = (data) => {
@@ -1574,12 +1571,21 @@ setSelectedItem = (el,index) => {
     selectedItemsArr.push(el);
     localStorage.setItem('selectedItemsArr', JSON.stringify(selectedItemsArr));
 
+    let count = JSON.parse(localStorage.getItem('selectedItemsArr'));
+    document.getElementById('countItems').innerText = count.length;
+
+    if(count.length >= 4) {
+        document.getElementById('continue').classList.add('realContinue');
+    }
+
+    document.getElementById('subTotal_span').innerText = +count.length * 12.50;
+    localStorage.setItem('subtotal', JSON.stringify(+count.length * 12.50));
+
     appendBill(selectedItemsArr);
 
 }
 
 
-// Appending data in Billing section.
 let billData = document.querySelector('.clicked-items');
 
 appendBill = (selectedItemsArr) => {
@@ -1610,6 +1616,9 @@ appendBill = (selectedItemsArr) => {
         let p2 = document.createElement('p');
         p2.innerText = '+';
         p2.className = 'deleteThisItem';
+        p2.onclick = function () {
+            deleteItemFromBill(el);
+        }
     
         btn_container.append(p2);
     
@@ -1632,6 +1641,7 @@ function clearAlldata () {
     billData.innerHTML = null;
 
     localStorage.removeItem('selectedItemsArr');
+    localStorage.removeItem('subtotal');
     
     window.location.reload();
 }
@@ -1657,10 +1667,22 @@ function deleteItemFromBill(element) {
 
     localStorage.setItem('selectedItemsArr', JSON.stringify(dataForDelete));
     let newData = JSON.parse(localStorage.getItem('selectedItemsArr'));
+
+    let count = JSON.parse(localStorage.getItem('selectedItemsArr'));
+    document.getElementById('countItems').innerText = count.length;
+
+    if(count.length < 4) {
+        document.getElementById('continue').classList.remove('realContinue');
+    }
+
+    localStorage.setItem('subtotal', JSON.stringify(+count.length * 12.50));
+
+    let billAfterMinus = +JSON.parse(localStorage.getItem('subtotal'));
+    if(billAfterMinus > 0) {
+        document.getElementById('subTotal_span').innerText = +billAfterMinus - 12.50;
+    }
     
     appendBill(newData);
-
-    // window.location.reload();
 }
 
 
@@ -1814,7 +1836,35 @@ PopUpDetails = (el) => {
 
 }
 
+
 closePopUp = () => {
     detail_window.innerHTML = null;
     detail_window.style.display = 'none';
+}
+
+
+let count = JSON.parse(localStorage.getItem('selectedItemsArr'));
+document.getElementById('countItems').innerText = +count.length;
+
+if(count.length >= 4) {
+    document.getElementById('continue').classList.add('realContinue');
+}
+else {
+    document.getElementById('continue').classList.remove('realContinue');
+}
+
+document.getElementById('subTotal_span').innerText = +count.length * 12.50;
+localStorage.setItem('subtotal', JSON.stringify(+count.length * 12.50));
+
+
+document.getElementById('continue').addEventListener('click', gotoCheckOut);
+
+function gotoCheckOut() {
+    
+    let totalLength = JSON.parse(localStorage.getItem('selectedItemsArr'));
+
+    if( totalLength.length >= 4 ) {
+        window.location.href = "";
+    }
+
 }
