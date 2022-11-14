@@ -424,6 +424,10 @@ body {
     scale: 1.2;
 }
 
+.cardDiv:hover .itemName {
+    color: teal;
+}
+
 .img_container {
     border-radius: 12px 12px 0 0;
 }
@@ -442,6 +446,8 @@ body {
     padding-left: 15px;
 }
 
+
+/* popUp window */
 #detail-window {
     width: 55%;
     height: 85vh;
@@ -616,15 +622,15 @@ body {
 
 /* Second Media Querie */
 @media only screen and (max-width: 1300px){
-    #grid-container {
-        grid-template-columns: repeat(3,1fr);
+
+    .grid-container-class {
+        grid-template-columns: repeat(3,1fr) !important;
     }
+    
     .cardDiv {
         min-height: 370px;
     }
-    .grid-container-class {
-        grid-template-columns: repeat(2,1fr) !important;
-    }
+    
     #detail-window {
         width: 75%;
         left: 25vh;
@@ -655,7 +661,7 @@ body {
         margin-right: 3px;
     }
     #grid-container {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
     }
     .cardDiv {
         min-height: 360px;
@@ -684,7 +690,7 @@ body {
         left: 20px;
     }
     #detail-window {
-        width: 90%;
+        width: 80%;
         left: 3vh;
     }
     .topBoxPart1 {
@@ -741,7 +747,7 @@ body {
         margin: auto;
         right: 0;
         left: 0;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
     .cardDiv {
         min-height: 360px; 
