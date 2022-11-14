@@ -1443,12 +1443,16 @@ function append(data) {
 
         let n = document.createElement('h3');
         n.innerText = el.name;
+        n.className = "itemName";
+        // n.style.color = 'teal';
 
         let sub = document.createElement('p');
         sub.innerText = el.subtitle;
+        // sub.style.color = 'grey';
 
         let cal = document.createElement('p');
         cal.innerText = el.calories;
+        // cal.style.color = 'grey';
 
         let plus = document.createElement('div');
         plus.className = 'adding';
